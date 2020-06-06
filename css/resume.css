@@ -28,7 +28,6 @@ body {
     height: 50mm;
     display: flex;
     align-items: center;
-    margin-bottom: 10mm;
 }
 
 .full-name {
@@ -96,4 +95,8 @@ body {
 .section-content {
     padding-left: 20mm;
     padding-right: 20mm;
+}
+
+.summary-section {
+    margin-top: 10mm;
 }
