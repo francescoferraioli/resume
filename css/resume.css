@@ -74,14 +74,21 @@ body {
     align-items: center;
 }
 
-.section-heading > span {
+.section-heading > .text {
     padding-left: 3mm;
 }
 
-.section-heading > i.fa {
+.section-heading > .icon {
     background:rgb(35, 140, 182);
-    padding: 2.5mm;
+    width: 7mm;
+    height: 7mm;
     border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-heading > .icon > i.fa {
     color: white;
     font-size: 2mm;
 }
