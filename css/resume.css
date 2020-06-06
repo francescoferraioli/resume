@@ -27,6 +27,7 @@ body {
     height: 50mm;
     display: flex;
     align-items: center;
+    margin-bottom: 10mm;
 }
 
 .full-name {
@@ -62,4 +63,16 @@ body {
 .no-link {
     color: #000;
     text-decoration: none;
+}
+
+.section-heading {
+    padding-left: 5mm;
+    font-size: 16pt;
+}
+
+.section-heading > i.fa {
+    background:skyblue;
+    padding: 7px;
+    border-radius: 50%;
+    color: white;
 }
