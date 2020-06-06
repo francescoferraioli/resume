@@ -23,7 +23,7 @@ body {
 }
 
 .header {
-    background-color: lightgray;
+    background-color: rgb(236, 234, 234);
     height: 50mm;
     display: flex;
     align-items: center;
@@ -56,7 +56,7 @@ body {
 }
 
 .contact-info i.fa {
-    color: skyblue;
+    color: rgb(35, 140, 182);
     font-size: 14pt;
 }
 
@@ -71,7 +71,7 @@ body {
 }
 
 .section-heading > i.fa {
-    background:skyblue;
+    background:rgb(35, 140, 182);
     padding: 7px;
     border-radius: 50%;
     color: white;
