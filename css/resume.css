@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: lightsteelblue;
-    font: 12pt "Tahoma";
+    font: 4mm "Tahoma";
 }
 * {
     box-sizing: border-box;
@@ -33,7 +33,7 @@ body {
 
 .full-name {
     padding-left: 20mm;
-    font-size: 24pt;
+    font-size: 8mm;
 }
 
 .last-name {
@@ -59,7 +59,7 @@ body {
 
 .contact-info i.fa {
     color: rgb(35, 140, 182);
-    font-size: 14pt;
+    font-size: 5mm;
 }
 
 .no-link {
@@ -69,7 +69,7 @@ body {
 
 .section-heading {
     padding-left: 10mm;
-    font-size: 16pt;
+    font-size: 6mm;
     display: flex;
     align-items: center;
 }
@@ -83,7 +83,7 @@ body {
     padding: 2.5mm;
     border-radius: 50%;
     color: white;
-    font-size: 6pt;
+    font-size: 2mm;
 }
 
 .section-content {
