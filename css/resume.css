@@ -31,7 +31,7 @@ body {
 }
 
 .full-name {
-    padding-left: 10mm;
+    padding-left: 20mm;
     font-size: 24pt;
 }
 
@@ -41,7 +41,7 @@ body {
 
 .contact-info {
     flex-grow: 1;
-    padding-right: 10mm;
+    padding-right: 20mm;
 }
 
 .contact-info > div {
@@ -66,7 +66,7 @@ body {
 }
 
 .section-heading {
-    padding-left: 5mm;
+    padding-left: 10mm;
     font-size: 16pt;
 }
 
