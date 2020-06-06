@@ -69,11 +69,18 @@ body {
 .section-heading {
     padding-left: 10mm;
     font-size: 16pt;
+    display: flex;
+    align-items: center;
+}
+
+.section-heading > span {
+    padding-left: 10px;
 }
 
 .section-heading > i.fa {
     background:rgb(35, 140, 182);
-    padding: 7px;
+    padding: 10px;
     border-radius: 50%;
     color: white;
+    font-size: 6pt;
 }
