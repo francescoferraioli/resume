@@ -16,13 +16,14 @@ body {
     height: 297mm;
     padding: 0mm;
     margin: 10mm auto;
-    border: 1px #D3D3D3 solid;
-    border-radius: 5px;
+    border: 0.25mm #D3D3D3 solid;
+    border-radius: 1mm;
     background: white;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 5mm rgba(0, 0, 0, 0.1);
 }
 
 .header {
+    border-radius: 0.5mm;
     background-color: rgb(236, 234, 234);
     height: 50mm;
     display: flex;
@@ -36,7 +37,7 @@ body {
 }
 
 .last-name {
-    padding-top: 10px;
+    padding-top: 2.5mm;
     font-weight: bold;
 }
 
@@ -74,12 +75,12 @@ body {
 }
 
 .section-heading > span {
-    padding-left: 10px;
+    padding-left: 3mm;
 }
 
 .section-heading > i.fa {
     background:rgb(35, 140, 182);
-    padding: 10px;
+    padding: 2.5mm;
     border-radius: 50%;
     color: white;
     font-size: 6pt;
