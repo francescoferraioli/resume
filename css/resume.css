@@ -13,11 +13,52 @@ body {
 
 .page {
     width: 210mm;
-    min-height: 297mm;
-    padding: 20mm;
+    height: 297mm;
+    padding: 1mm;
     margin: 10mm auto;
     border: 1px #D3D3D3 solid;
     border-radius: 5px;
     background: white;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    height: 50mm;
+    display: flex;
+    align-items: center;
+}
+
+.full-name {
+    padding-left: 10mm;
+    font-size: 24pt;
+}
+
+.last-name {
+    font-weight: bold;
+}
+
+.contact-info {
+    flex-grow: 1;
+    padding-right: 10mm;
+}
+
+.contact-info > div {
+    padding: 1mm 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-info > div > div:last-child {
+    width: 10mm;
+    text-align: center;
+}
+
+.contact-info i.fa {
+    color: skyblue;
+    font-size: 14pt;
+}
+
+.no-link {
+    color: #000;
+    text-decoration: none;
 }
