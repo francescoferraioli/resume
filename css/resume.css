@@ -84,3 +84,7 @@ body {
     color: white;
     font-size: 6pt;
 }
+
+.section-content {
+    padding-left: 20mm;
+}
