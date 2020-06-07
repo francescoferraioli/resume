@@ -25,7 +25,7 @@ body {
 .header {
     border-radius: 0.5mm;
     background-color: rgb(236, 234, 234);
-    height: 50mm;
+    height: 45mm;
     display: flex;
     align-items: center;
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .summary-section {
-    margin-top: 10mm;
+    margin-top: 7mm;
 }
 
 .skills-section {
