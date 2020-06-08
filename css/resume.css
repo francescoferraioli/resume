@@ -105,3 +105,22 @@ body {
 .skills-section {
     margin-top: 10mm;
 }
+
+.skills-lists {
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills-lists > div {
+    width: 33%;
+}
+
+.skills-lists ul {
+    margin: 0;
+    padding-left: 5mm;
+}
+
+.skills-section p {
+    margin-top: 4mm;
+    margin-bottom: 2mm;
+}
