@@ -121,6 +121,10 @@ body {
     list-style: none;
 }
 
+.skills-lists ul > li {
+    padding-bottom: 1mm;
+}
+
 .skills-lists ul li::before {
     content: "\2022";
     color: rgb(35, 140, 182);
