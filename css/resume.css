@@ -118,6 +118,16 @@ body {
 .skills-lists ul {
     margin: 0;
     padding-left: 5mm;
+    list-style: none;
+}
+
+.skills-lists ul li::before {
+    content: "\2022";
+    color: rgb(35, 140, 182);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
 }
 
 .skills-section p {
