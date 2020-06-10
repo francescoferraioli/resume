@@ -20,6 +20,7 @@ body {
     border-radius: 1mm;
     background: white;
     box-shadow: 0 0 5mm rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
 .header {
@@ -137,4 +138,25 @@ body {
 .skills-section p {
     margin-top: 4mm;
     margin-bottom: 2mm;
+}
+
+.footer {
+    display: flex;
+    position: absolute;
+    bottom: 7mm;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.footer > div:first-child {
+    display: flex;
+    padding-left: 15mm;
+}
+
+.footer > div:last-child {
+    padding-right: 15mm;
+}
+
+.footer > div:first-child > div:not(:last-child) {
+    padding-right: 6mm;
 }
