@@ -107,26 +107,26 @@ body {
     margin-top: 10mm;
 }
 
-.skills-lists {
+.list-of-lists {
     display: flex;
     justify-content: space-between;
 }
 
-.skills-lists > div {
+.list-of-lists > div {
     width: 33%;
 }
 
-.skills-lists ul {
+.list-of-lists ul {
     margin: 0;
     padding-left: 5mm;
     list-style: none;
 }
 
-.skills-lists ul > li {
+.list-of-lists ul > li {
     padding-bottom: 1mm;
 }
 
-.skills-lists ul li::before {
+.list-of-lists ul li::before {
     content: "\2022";
     color: rgb(35, 140, 182);
     font-weight: bold;
