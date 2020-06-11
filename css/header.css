@@ -1,0 +1,38 @@
+.header {
+    border-radius: 0.5mm;
+    background-color: rgb(236, 234, 234);
+    height: 45mm;
+    display: flex;
+    align-items: center;
+}
+
+.full-name {
+    padding-left: 20mm;
+    font-size: 8mm;
+}
+
+.last-name {
+    padding-top: 2.5mm;
+    font-weight: bold;
+}
+
+.contact-info {
+    flex-grow: 1;
+    padding-right: 10mm;
+}
+
+.contact-info > div {
+    padding: 1mm 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-info > div > div:last-child {
+    width: 10mm;
+    text-align: center;
+}
+
+.contact-info i.fa {
+    color: rgb(35, 140, 182);
+    font-size: 5mm;
+}

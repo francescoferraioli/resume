@@ -1,0 +1,31 @@
+.section-heading {
+    padding-left: 10mm;
+    font-size: 6mm;
+    display: flex;
+    align-items: center;
+}
+
+.section-heading > .text {
+    padding-left: 3mm;
+}
+
+.section-heading > .icon {
+    background:rgb(35, 140, 182);
+    width: 7mm;
+    height: 7mm;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-heading > .icon > i.fa {
+    color: white;
+    font-size: 3mm;
+}
+
+.section-content {
+    padding-left: 20mm;
+    padding-right: 20mm;
+    text-align: justify;
+}

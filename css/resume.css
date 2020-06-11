@@ -23,88 +23,9 @@ body {
     position: relative;
 }
 
-.header {
-    border-radius: 0.5mm;
-    background-color: rgb(236, 234, 234);
-    height: 45mm;
-    display: flex;
-    align-items: center;
-}
-
-.full-name {
-    padding-left: 20mm;
-    font-size: 8mm;
-}
-
-.last-name {
-    padding-top: 2.5mm;
-    font-weight: bold;
-}
-
-.contact-info {
-    flex-grow: 1;
-    padding-right: 10mm;
-}
-
-.contact-info > div {
-    padding: 1mm 0;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.contact-info > div > div:last-child {
-    width: 10mm;
-    text-align: center;
-}
-
-.contact-info i.fa {
-    color: rgb(35, 140, 182);
-    font-size: 5mm;
-}
-
 .no-link {
     color: #000;
     text-decoration: none;
-}
-
-.section-heading {
-    padding-left: 10mm;
-    font-size: 6mm;
-    display: flex;
-    align-items: center;
-}
-
-.section-heading > .text {
-    padding-left: 3mm;
-}
-
-.section-heading > .icon {
-    background:rgb(35, 140, 182);
-    width: 7mm;
-    height: 7mm;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.section-heading > .icon > i.fa {
-    color: white;
-    font-size: 3mm;
-}
-
-.section-content {
-    padding-left: 20mm;
-    padding-right: 20mm;
-    text-align: justify;
-}
-
-.summary-section {
-    margin-top: 7mm;
-}
-
-.skills-section {
-    margin-top: 10mm;
 }
 
 .list-of-lists {
@@ -133,38 +54,4 @@ body {
     display: inline-block;
     width: 1em;
     margin-left: -1em;
-}
-
-.skills-section p {
-    margin-top: 4mm;
-    margin-bottom: 2mm;
-}
-
-.footer {
-    display: flex;
-    position: absolute;
-    bottom: 7mm;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.footer > div:first-child {
-    display: flex;
-    padding-left: 15mm;
-}
-
-.footer > div:last-child {
-    padding-right: 15mm;
-}
-
-.footer > div:first-child > div:not(:last-child) {
-    padding-right: 6mm;
-}
-
-.interests-section {
-    margin-top: 10mm;
-}
-
-.interests-section > .section-heading {
-    padding-bottom: 5mm;
 }
