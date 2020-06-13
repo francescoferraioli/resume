@@ -1,0 +1,24 @@
+.experience-section {
+    padding-top: 10mm;
+}
+
+.experience-heading > div {
+    display: flex;
+    padding: 1mm 0;
+}
+
+.experience-heading > div > div:not(:last-child) {
+    padding-right: 3mm;
+}
+
+.experience-heading > div:first-child > div:not(:last-child) {
+    color: rgb(35, 140, 182);
+}
+
+.stacktrace-section {
+    padding-top: 2mm;
+}
+
+.stacktrace-project > div:first-child {
+    text-decoration: underline;
+}
