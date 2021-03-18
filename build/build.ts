@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as Handlebars from "handlebars";
-import { data } from "./data";
+import { getContext } from "./context";
 import helpers from "./helpers";
 
 Handlebars.registerPartial("partial", (context) =>
@@ -15,6 +15,8 @@ Object.keys(helpers).forEach((helper) => {
 
 const src = fs.readFileSync("src/index.hbs", "utf8");
 
-const dist = Handlebars.compile(src)(data);
+const context = getContext();
+
+const dist = Handlebars.compile(src)(context);
 
 fs.writeFileSync("docs/index.html", dist);
