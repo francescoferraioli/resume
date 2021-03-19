@@ -1,5 +1,6 @@
 import * as fs from "fs";
 import * as Handlebars from "handlebars";
+import * as Sass from "sass";
 import { getContext } from "./context";
 import helpers from "./helpers";
 
@@ -23,4 +24,13 @@ function html() {
   fs.writeFileSync("docs/index.html", dist);
 }
 
+function css() {
+  const dist = Sass.renderSync({
+    file: "src/scss/index.scss",
+  });
+
+  fs.writeFileSync("docs/css/index.css", dist.css);
+}
+
 html();
+css();
