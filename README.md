@@ -61,3 +61,11 @@ Open the output (if you haven't done so) or just refresh the page:
 ```
 bin/open
 ```
+
+### Watch and Reload
+
+You can automate the watch and reload using:
+
+```
+yarn start:watch
+```

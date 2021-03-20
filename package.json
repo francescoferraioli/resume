@@ -9,7 +9,8 @@
     "build": "bin/build",
     "open": "bin/open",
     "start": "bin/start",
-    "watch": "bin/watch"
+    "watch": "bin/watch",
+    "start:watch": "concurrently bin/start bin/watch"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
