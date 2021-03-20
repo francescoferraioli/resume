@@ -44,30 +44,18 @@ Because the build artifacts are part of the repo (in order to be deployed on Git
 
 ## Development
 
-Start by installing the dependencies:
+1. Start by installing the dependencies:
 
 ```
 yarn
 ```
 
-Edit the `hbs` and `scss` files in `src`.
-
-Build the `src` into `docs`:
-
-```
-bin/build
-```
-
-Open the output (if you haven't done so) or just refresh the page:
-
-```
-bin/open
-```
-
-### Watch and Reload
-
-You can automate the watch and reload using:
+2. Start your server and watch the files:
 
 ```
 yarn start:watch
 ```
+
+3. Edit the `hbs` and `scss` files in `src`.
+
+4. Profit!
