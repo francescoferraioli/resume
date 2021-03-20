@@ -12,6 +12,9 @@ It will take the `src` and output the results in `docs` to be published on Githu
 - `bin/open`
 It will open the output in your default browser.
 
+- `bin/watch`
+It will watch for changes in your `src` and run the build again.
+
 ## build
 
 Contains TypeScript files that are called by the `bin/build` script to undertake the build.
