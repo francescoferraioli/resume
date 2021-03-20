@@ -166,11 +166,11 @@ body {
   display: flex;
   padding: 1mm 0;
 }
-.experience-section .experience-heading > div > div:not(:last-child) {
-  padding-right: 3mm;
-}
 .experience-section .experience-heading > div:first-child > div:not(:last-child) {
   color: #238cb6;
+}
+.experience-section .experience-heading > div > div:not(:last-child) {
+  padding-right: 3mm;
 }
 .experience-section .stacktrace-section {
   padding-top: 2mm;
