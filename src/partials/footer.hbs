@@ -2,9 +2,9 @@
     <div>
         <div>{{> fullName }}</div>
         <div>|</div>
-        <div>0424 938 538</div>
+        <div>{{ formatPhone contactInfo.phone }}</div>
         <div>|</div>
-        <div>francesco.ferraioli@outlook.com</div>
+        <div>{{ contactInfo.email }}</div>
     </div>
     <div>{{ num }}</div>
 </div>
