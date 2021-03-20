@@ -119,6 +119,7 @@ const personalSkills: SkillCategory = {
     "Honest",
     "Team Work",
     "Transparent",
+    "Listening",
   ],
   subcategories: [],
 };
