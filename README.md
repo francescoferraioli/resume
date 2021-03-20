@@ -16,7 +16,7 @@ It will open the browser and watch for changes in the `docs` folder.
 It will open the output in your default browser.
 
 - `bin/watch`
-It will watch for changes in your `src` and run the build again.
+It will watch for changes in your `src` and `build` folders and run the build again.
 
 For each entry in bin, there is an equivalent yarn script. eg: `yarn start === bin/start`
 

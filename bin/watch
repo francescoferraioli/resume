@@ -8,6 +8,6 @@ REPO_ROOT="./$SCRIPT_PATH/.."
 
 cd $REPO_ROOT
 
-find src | yarn entr bin/build
+find src build | yarn entr bin/build
 
 cd $START_DIR
