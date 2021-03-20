@@ -5,6 +5,7 @@ export interface Context {
   sections: Sections;
   summary: string[];
   skillCategories: SkillCategory[];
+  interests: string[];
 }
 
 interface ContactInfo {
@@ -69,6 +70,7 @@ export const getContext = (): Context => {
     },
     summary,
     skillCategories,
+    interests,
   };
 };
 
@@ -125,3 +127,12 @@ const personalSkills: SkillCategory = {
 };
 
 const skillCategories: SkillCategory[] = [technicalSkills, personalSkills];
+
+const interests = [
+  "Coding",
+  "Technology",
+  "Chess",
+  "Puzzles",
+  "Sport",
+  "Soccer",
+];
