@@ -2,6 +2,7 @@ import * as fs from "fs";
 import * as Handlebars from "handlebars";
 import * as Sass from "sass";
 import { getContext } from "./context";
+import partials from "./partials";
 import helpers from "./helpers";
 
 function html() {
@@ -10,6 +11,10 @@ function html() {
       fs.readFileSync(`src/partials/${context.partial}.hbs`, "utf8")
     )(context)
   );
+
+  Object.keys(partials).forEach((partial) => {
+    Handlebars.registerPartial(partial, partials[partial]);
+  });
 
   Object.keys(helpers).forEach((helper) => {
     Handlebars.registerHelper(helper, helpers[helper]);
