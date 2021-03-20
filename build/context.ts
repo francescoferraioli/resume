@@ -4,6 +4,7 @@ export interface Context {
   contactInfo: ContactInfo;
   sections: Sections;
   summary: string[];
+  skillCategories: SkillCategory[];
 }
 
 interface ContactInfo {
@@ -24,6 +25,17 @@ interface Sections {
 interface Section {
   name: string;
   icon: string;
+}
+
+interface SkillCategory {
+  heading: string;
+  skills: string[];
+  subcategories: SkillSubcategory[];
+}
+
+interface SkillSubcategory {
+  heading: string;
+  skills: string[];
 }
 
 export const getContext = (): Context => {
@@ -56,6 +68,7 @@ export const getContext = (): Context => {
       },
     },
     summary,
+    skillCategories,
   };
 };
 
@@ -65,3 +78,49 @@ const summary: string[] = [
   "I am a strong believer in being in a continuous state of learning as technology continues to rapidly evolve.",
   "I also believe that working in a team of people with the same passion is paramount.",
 ];
+
+const backendSkills: SkillSubcategory = {
+  heading: "Backend",
+  skills: [
+    ".NET Core",
+    "C# / F#",
+    "NUnit / XUnit",
+    "Java",
+    "JUnit",
+    "OData",
+    "Azure",
+    "AWS",
+  ],
+};
+
+const frontendSkills: SkillSubcategory = {
+  heading: "Frontend",
+  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "LESS / SASS"],
+};
+
+const otherTechnicalSkills: SkillSubcategory = {
+  heading: "Other",
+  skills: ["GIT", "VIM", "Command Line"],
+};
+
+const technicalSkills: SkillCategory = {
+  heading: "Technical",
+  skills: [],
+  subcategories: [backendSkills, frontendSkills, otherTechnicalSkills],
+};
+
+const personalSkills: SkillCategory = {
+  heading: "Personal",
+  skills: [
+    "Communication",
+    "Fast Learner",
+    "Pragmatic",
+    "Leading",
+    "Honest",
+    "Team Work",
+    "Transparent",
+  ],
+  subcategories: [],
+};
+
+const skillCategories: SkillCategory[] = [technicalSkills, personalSkills];
