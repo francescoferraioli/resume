@@ -5,15 +5,15 @@
     </div>
     <div class="contact-info">
         <div>
-            <div>Brisbane</div>
+            <div>{{ contactInfo.address }}</div>
             <div><i class="fa fa-home"></i></div>
         </div>
         <div>
             <div>
                 <a
                     class="no-link"
-                    href="tel:+61424938538">
-                    0424 938 538
+                    href="tel:+61{{ contactInfo.phone }}">
+                    {{ formatPhone contactInfo.phone }}
                 </a>
             </div>
             <div><i class="fa fa-phone"></i></div>
@@ -22,8 +22,8 @@
             <div>
                 <a
                     class="no-link"
-                    href="mailto:francesco.ferraioli@outlook.com">
-                    francesco.ferraioli@outlook.com
+                    href="mailto:{{ contactInfo.email }}">
+                    {{ contactInfo.email }}
                 </a>
             </div>
             <div><i class="fa fa-envelope"></i></div>
@@ -32,8 +32,8 @@
             <div>
                 <a
                     class="no-link"
-                    href="https://github.com/francescoferraioli">
-                    https://github.com/francescoferraioli
+                    href="https://github.com/{{ contactInfo.github }}">
+                    https://github.com/{{ contactInfo.github }}
                 </a>
             </div>
             <div><i class="fa fa-github"></i></div>
@@ -42,8 +42,8 @@
             <div>
                 <a
                     class="no-link"
-                    href="https://www.linkedin.com/in/ferraiolifrancesco">
-                    https://www.linkedin.com/in/ferraiolifrancesco
+                    href="https://www.linkedin.com/in/{{ contactInfo.linkedIn }}">
+                    https://www.linkedin.com/in/{{ contactInfo.linkedIn }}
                 </a>
             </div>
             <div><i class="fa fa-linkedin"></i></div>
