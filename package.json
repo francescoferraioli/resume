@@ -5,6 +5,12 @@
   "repository": "git@github.com:francescoferraioli/resume.git",
   "author": "Francesco Ferraioli <francesco.ferraioli@outlook.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "bin/build",
+    "open": "bin/open",
+    "start": "bin/start",
+    "watch": "bin/watch"
+  },
   "dependencies": {
     "handlebars": "^4.7.7",
     "sass": "^1.32.8"

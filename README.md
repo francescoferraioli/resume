@@ -18,6 +18,8 @@ It will open the output in your default browser.
 - `bin/watch`
 It will watch for changes in your `src` and run the build again.
 
+For each entry in bin, there is an equivalent yarn script. eg: `yarn start === bin/start`
+
 ## build
 
 Contains TypeScript files that are called by the `bin/build` script to undertake the build.
