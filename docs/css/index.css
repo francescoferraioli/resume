@@ -34,22 +34,18 @@ body {
   display: flex;
   justify-content: space-between;
 }
-
 .list-of-lists > div {
   width: 33%;
 }
-
 .list-of-lists ul {
   margin: 0;
   padding-left: 5mm;
   list-style: none;
 }
-
 .list-of-lists ul > li {
   padding-bottom: 1mm;
 }
-
-.list-of-lists ul li::before {
+.list-of-lists ul > li::before {
   content: "•";
   color: #238cb6;
   font-weight: bold;
@@ -65,34 +61,28 @@ body {
   display: flex;
   align-items: center;
 }
-
-.full-name {
+.header .full-name {
   padding-left: 20mm;
   font-size: 8mm;
 }
-
-.last-name {
+.header .last-name {
   padding-top: 2.5mm;
   font-weight: bold;
 }
-
-.contact-info {
+.header .contact-info {
   flex-grow: 1;
   padding-right: 10mm;
 }
-
-.contact-info > div {
+.header .contact-info > div {
   padding: 1mm 0;
   display: flex;
   justify-content: flex-end;
 }
-
-.contact-info > div > div:last-child {
+.header .contact-info > div > div:last-child {
   width: 10mm;
   text-align: center;
 }
-
-.contact-info i.fa {
+.header .contact-info i.fa {
   color: #238cb6;
   font-size: 5mm;
 }
@@ -104,16 +94,13 @@ body {
   justify-content: space-between;
   width: 100%;
 }
-
 .footer > div:first-child {
   display: flex;
   padding-left: 15mm;
 }
-
 .footer > div:last-child {
   padding-right: 15mm;
 }
-
 .footer > div:first-child > div:not(:last-child) {
   padding-right: 6mm;
 }
@@ -124,11 +111,9 @@ body {
   display: flex;
   align-items: center;
 }
-
 .section-heading > .text {
   padding-left: 3mm;
 }
-
 .section-heading > .icon {
   background: #238cb6;
   width: 7mm;
@@ -138,7 +123,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 .section-heading > .icon > i.fa {
   color: white;
   font-size: 3mm;
@@ -157,7 +141,6 @@ body {
 .skills-section {
   margin-top: 10mm;
 }
-
 .skills-section p {
   margin-top: 4mm;
   margin-bottom: 2mm;
@@ -166,7 +149,6 @@ body {
 .interests-section {
   margin-top: 10mm;
 }
-
 .interests-section > .section-heading {
   padding-bottom: 5mm;
 }
@@ -174,25 +156,20 @@ body {
 .experience-section {
   padding-top: 10mm;
 }
-
-.experience-heading > div {
+.experience-section .experience-heading > div {
   display: flex;
   padding: 1mm 0;
 }
-
-.experience-heading > div > div:not(:last-child) {
+.experience-section .experience-heading > div > div:not(:last-child) {
   padding-right: 3mm;
 }
-
-.experience-heading > div:first-child > div:not(:last-child) {
+.experience-section .experience-heading > div:first-child > div:not(:last-child) {
   color: #238cb6;
 }
-
-.stacktrace-section {
+.experience-section .stacktrace-section {
   padding-top: 2mm;
 }
-
-.stacktrace-project > div:first-child {
+.experience-section .stacktrace-section .stacktrace-project > div:first-child {
   text-decoration: underline;
 }
 
