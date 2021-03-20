@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+START_DIR=`pwd`
+SCRIPT_PATH=`dirname "$0"`
+REPO_ROOT="./$SCRIPT_PATH/.."
+
+cd $REPO_ROOT
+
+yarn browser-sync start -sw --files "docs/" --startPath "docs/index.html"
+
+cd $START_DIR

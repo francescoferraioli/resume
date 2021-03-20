@@ -9,6 +9,9 @@ Includes some handy scripts:
 - `bin/build`
 It will take the `src` and output the results in `docs` to be published on Github Pages.
 
+- `bin/start`
+It will open the browser and watch for changes in the `docs` folder.
+
 - `bin/open`
 It will open the output in your default browser.
 
