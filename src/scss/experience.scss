@@ -5,27 +5,6 @@
         margin-top: 0.5mm;
     }
 
-    .experience-heading {
-        > div {
-            display: flex;
-            padding: 1mm 0;
-
-            &:first-child {
-                > div {
-                    &:not(:last-child) {
-                        color: rgb(35, 140, 182);
-                    }
-                }
-            }
-
-            > div {
-                &:not(:last-child) {
-                    padding-right: 3mm;
-                }
-            }
-        }
-    }     
-
     .stacktrace-section {
         padding-top: 2mm;
 

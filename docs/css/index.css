@@ -162,21 +162,22 @@ body {
 .experience-section .section-heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
-.experience-section .experience-heading > div {
-  display: flex;
-  padding: 1mm 0;
-}
-.experience-section .experience-heading > div:first-child > div:not(:last-child) {
-  color: #238cb6;
-}
-.experience-section .experience-heading > div > div:not(:last-child) {
-  padding-right: 3mm;
-}
 .experience-section .stacktrace-section {
   padding-top: 2mm;
 }
 .experience-section .stacktrace-section .stacktrace-project > div:first-child {
   text-decoration: underline;
+}
+
+.experience-heading > div {
+  display: flex;
+  padding: 1mm 0;
+}
+.experience-heading > div:first-child > div:not(:last-child) {
+  color: #238cb6;
+}
+.experience-heading > div > div:not(:last-child) {
+  padding-right: 3mm;
 }
 
 @page {
