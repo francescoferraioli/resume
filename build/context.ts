@@ -2,7 +2,6 @@ export interface Context {
   firstName: string;
   lastName: string;
   contactInfo: ContactInfo;
-  sections: Sections;
   summary: string[];
   skillCategories: SkillCategory[];
   interests: string[];
@@ -15,18 +14,6 @@ interface ContactInfo {
   email: string;
   github: string;
   linkedIn: string;
-}
-
-interface Sections {
-  summary: Section;
-  skills: Section;
-  interests: Section;
-  experience: Section;
-}
-
-interface Section {
-  name: string;
-  icon: string;
 }
 
 interface SkillCategory {
@@ -57,24 +44,6 @@ export const getContext = (): Context => {
       email: "francesco.ferraioli@outlook.com",
       github: "francescoferraioli",
       linkedIn: "ferraiolifrancesco",
-    },
-    sections: {
-      summary: {
-        name: "summary",
-        icon: "bars",
-      },
-      skills: {
-        name: "skills",
-        icon: "wrench",
-      },
-      interests: {
-        name: "interests",
-        icon: "heart",
-      },
-      experience: {
-        name: "experience",
-        icon: "briefcase",
-      },
     },
     summary,
     skillCategories,
