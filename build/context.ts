@@ -69,7 +69,7 @@ const parseMarkdownFile = (name: string): Record<string, string[]> => ({
   [name.replace(".md", "")]: fs
     .readFileSync(`${markdownFolder}${name}`, "utf-8")
     .split("\n")
-    .map((x) => md().render(x))
+    .map((x) => (x.startsWith("<") ? x : md().render(x)))
     .map((x) => x.trimEnd()),
 });
 
