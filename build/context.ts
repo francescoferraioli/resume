@@ -1,3 +1,8 @@
+import * as fs from "fs";
+import * as md from "markdown-it";
+
+const markdownFolder = "src/md/";
+
 export interface Context {
   firstName: string;
   lastName: string;
@@ -6,6 +11,7 @@ export interface Context {
   skillCategories: SkillCategory[];
   interests: string[];
   experiences: Record<string, Experience>;
+  markdown: Record<string, string[]>;
 }
 
 interface ContactInfo {
@@ -49,8 +55,23 @@ export const getContext = (): Context => {
     skillCategories,
     interests,
     experiences,
+    markdown: getMarkdown(),
   };
 };
+
+const getMarkdown = (): Record<string, string[]> =>
+  fs
+    .readdirSync(markdownFolder)
+    .map(parseMarkdownFile)
+    .reduce(Object.assign, {});
+
+const parseMarkdownFile = (name: string): Record<string, string[]> => ({
+  [name.replace(".md", "")]: fs
+    .readFileSync(`${markdownFolder}${name}`, "utf-8")
+    .split("\n")
+    .map((x) => md().render(x))
+    .map((x) => x.trimEnd()),
+});
 
 const summary: string[] = [
   "I am an extremely passionate full stack engineer favoring .NET (C# / F#) on the backend and React/Angular on the front end whilst having a broad experience in many other technologies.",
