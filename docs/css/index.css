@@ -134,21 +134,11 @@ body {
   text-align: justify;
 }
 
-.summary-section {
-  margin-top: 7mm;
-}
-
-.skills-section {
-  margin-top: 10mm;
-}
 .skills-section p {
   margin-top: 4mm;
   margin-bottom: 2mm;
 }
 
-.interests-section {
-  margin-top: 10mm;
-}
 .interests-section .section-heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
@@ -156,9 +146,6 @@ body {
   padding-bottom: 5mm;
 }
 
-.experience-section {
-  padding-top: 10mm;
-}
 .experience-section .section-heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
