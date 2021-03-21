@@ -43,6 +43,12 @@ function moveContentsIntoPages(contents) {
 
     for(var i = 0;i < contents.length;i++){
         const content = $(contents[i]);
+        content.detach();
+    }
+
+    for(var i = 0;i < contents.length;i++){
+        const content = $(contents[i]);
+        content.appendTo(page)
         const contentHeight = getHeightInMM(content)
 
         accumulativeHeight += contentHeight;
@@ -51,10 +57,10 @@ function moveContentsIntoPages(contents) {
             accumulativeHeight = contentHeight;
             pageNumber++;
             page = createPage(pageNumber)
+            content.detach()
+            i--;
         }
 
-        content.detach();
-        content.appendTo(page)
     }
 }
 
