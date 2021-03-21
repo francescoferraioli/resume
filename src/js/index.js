@@ -31,7 +31,7 @@ function getFooterHeight() {
 }
 
 function getHeightInMM(elem) {
-    return Math.ceil($(elem).outerHeight() / pxPerMM);
+    return $(elem).outerHeight() / pxPerMM;
 }
 
 function moveContentsIntoPages(contents) {
