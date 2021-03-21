@@ -43,11 +43,12 @@ function moveContentsIntoPages(contents) {
 
     for(var i = 0;i < contents.length;i++){
         const content = $(contents[i]);
+        const contentHeight = getHeightInMM(content)
 
-        accumulativeHeight += getHeightInMM(content);
+        accumulativeHeight += contentHeight;
 
         if(accumulativeHeight + footerHeight + (pageNumber > 1 ? pageTopMargin : 0) > pageHeight) {
-            accumulativeHeight = 0;
+            accumulativeHeight = contentHeight;
             pageNumber++;
             page = createPage(pageNumber)
         }
