@@ -6,6 +6,7 @@ export interface Context {
   summary: string[];
   skillCategories: SkillCategory[];
   interests: string[];
+  experiences: Record<string, Experience>;
 }
 
 interface ContactInfo {
@@ -37,6 +38,13 @@ interface SkillCategory {
 interface SkillSubcategory {
   heading: string;
   skills: string[];
+}
+
+interface Experience {
+  jobTitle: string;
+  company: string;
+  start: string;
+  end: string;
 }
 
 export const getContext = (): Context => {
@@ -71,6 +79,7 @@ export const getContext = (): Context => {
     summary,
     skillCategories,
     interests,
+    experiences,
   };
 };
 
@@ -136,3 +145,12 @@ const interests = [
   "Sport",
   "Soccer",
 ];
+
+const stacktrace: Experience = {
+  jobTitle: "Senior Software Engineer",
+  company: "Stacktrace",
+  start: "AUGUST 2018",
+  end: "JANUARY 2021",
+};
+
+const experiences: Record<string, Experience> = { stacktrace };
