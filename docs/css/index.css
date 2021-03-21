@@ -98,15 +98,10 @@ p {
   bottom: 7mm;
   justify-content: space-between;
   width: 100%;
-}
-.footer > div:first-child {
-  display: flex;
   padding-left: 15mm;
-}
-.footer > div:last-child {
   padding-right: 15mm;
 }
-.footer > div:first-child > div:not(:last-child) {
+.footer > div:not(:last-child) {
   padding-right: 6mm;
 }
 
