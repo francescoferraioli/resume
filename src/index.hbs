@@ -6,11 +6,37 @@
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
     <title>{{> fullName }} - Resume</title>
 </head>
 <body>
-    {{> partial partial="page" num="1"}}
-    {{> partial partial="page" num="2"}}
+    <div class="container">
+        {{> partial partial="header" }}
+
+        {{> partial partial="spacer" height=7 }}
+
+        {{> partial partial="section" section=sections.summary }}
+
+        {{> partial partial="spacer" height=10 }}
+
+        {{> partial partial="section" section=sections.skills }}
+
+        {{> partial partial="spacer" height=10 }}
+
+        {{> partial partial="section" section=sections.interests }}
+
+        {{> partial partial="spacer" height=20 }}
+
+        {{> partial partial="spacer" height=10 }}
+
+        {{> partial partial="section" section=sections.experience }}
+    </div>
+
+    <div class="templates">
+        <div class="page-template">
+            {{> partial partial="page"}}
+        </div>
+    </div>
 </body>
 </html>
