@@ -153,13 +153,6 @@ p {
   margin-top: 0.5mm;
 }
 
-.content.experience .stacktrace-section {
-  padding-top: 2mm;
-}
-.content.experience .stacktrace-section .stacktrace-project > div:first-child {
-  text-decoration: underline;
-}
-
 .experience-heading > div {
   display: flex;
   padding: 1mm 0;
