@@ -16,21 +16,29 @@
 
         {{> partial partial="spacer" height=7 }}
 
-        {{> partial partial="section" section=sections.summary }}
+        {{> partial partial="heading" class="summary" name="summary" icon="bars" }}
+
+        {{> partial partial="content" class="summary" subpartial="sections/summary" }}
 
         {{> partial partial="spacer" height=10 }}
 
-        {{> partial partial="section" section=sections.skills }}
+        {{> partial partial="heading" class="skills" name="skills" icon="wrench" }}
+
+        {{> partial partial="content" class="skills" subpartial="sections/skills" }}
 
         {{> partial partial="spacer" height=10 }}
 
-        {{> partial partial="section" section=sections.interests }}
+        {{> partial partial="heading" class="interests" name="interests" icon="heart" }}
+
+        {{> partial partial="content" class="interests" subpartial="sections/interests" }}
 
         {{> partial partial="spacer" height=20 }}
 
         {{> partial partial="spacer" height=10 }}
 
-        {{> partial partial="section" section=sections.experience }}
+        {{> partial partial="heading" class="experience" name="experience" icon="briefcase" }}
+
+        {{> partial partial="content" class="experience" subpartial="sections/experience" }}
     </div>
 
     <div class="templates">

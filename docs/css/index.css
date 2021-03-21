@@ -110,16 +110,16 @@ p {
   padding-right: 6mm;
 }
 
-.section-heading {
+.heading {
   padding-left: 10mm;
   font-size: 6mm;
   display: flex;
   align-items: center;
 }
-.section-heading > .text {
+.heading > .text {
   padding-left: 3mm;
 }
-.section-heading > .icon {
+.heading > .icon {
   background: #238cb6;
   width: 7mm;
   height: 7mm;
@@ -128,36 +128,37 @@ p {
   justify-content: center;
   align-items: center;
 }
-.section-heading > .icon > i.fa {
+.heading > .icon > i.fa {
   color: white;
   font-size: 3mm;
 }
 
-.section-content {
+.content {
   padding-left: 20mm;
   padding-right: 20mm;
   text-align: justify;
 }
 
-.skills-section p {
+.content.skills p {
   margin-top: 4mm;
   margin-bottom: 2mm;
 }
 
-.interests-section .section-heading > .icon > i.fa {
-  margin-top: 0.5mm;
-}
-.interests-section > .section-heading {
+.heading.interests {
   padding-bottom: 5mm;
 }
-
-.experience-section .section-heading > .icon > i.fa {
+.heading.interests > .icon > i.fa {
   margin-top: 0.5mm;
 }
-.experience-section .stacktrace-section {
+
+.heading.experience > .icon > i.fa {
+  margin-top: 0.5mm;
+}
+
+.content.experience .stacktrace-section {
   padding-top: 2mm;
 }
-.experience-section .stacktrace-section .stacktrace-project > div:first-child {
+.content.experience .stacktrace-section .stacktrace-project > div:first-child {
   text-decoration: underline;
 }
 

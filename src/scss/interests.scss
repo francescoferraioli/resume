@@ -1,9 +1,7 @@
-.interests-section {
-    .section-heading > .icon > i.fa {
+.heading.interests {
+    padding-bottom: 5mm;
+
+    > .icon > i.fa {
         margin-top: 0.5mm;
     }
-
-    > .section-heading {
-        padding-bottom: 5mm;
-    }
-}
+} 

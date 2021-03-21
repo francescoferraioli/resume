@@ -1,11 +1,12 @@
-.experience-section {
-    .section-heading > .icon > i.fa {
+.heading.experience {
+    > .icon > i.fa {
         margin-top: 0.5mm;
     }
-
+} 
+.content.experience {
     .stacktrace-section {
         padding-top: 2mm;
-
+    
         .stacktrace-project > div:first-child {
             text-decoration: underline;
         }
