@@ -1,12 +1,10 @@
 import { exec } from "child_process";
-import { range } from "lodash";
+import { chain, range } from "lodash";
 
-export const partitionInGroups = <T>(items: T[], num: number): T[][] => {
-  const size = Math.ceil(items.length / num);
-  return range(num).map((n) =>
-    items.filter((_, i) => i >= n * size && i < (n + 1) * size)
-  );
-};
+export const partitionInGroups = <T>(items: T[], num: number): T[][] =>
+  chain(items)
+    .chunk(Math.ceil(items.length / num))
+    .value();
 
 export const run = (command: string) => {
   exec(command, (error, stdout, stderr) => {
