@@ -138,8 +138,8 @@ p {
 }
 
 .content.skills p {
-  margin-top: 4mm;
-  margin-bottom: 2mm;
+  padding-top: 2mm;
+  padding-bottom: 3mm;
 }
 
 .heading.interests {
