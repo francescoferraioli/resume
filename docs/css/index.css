@@ -29,6 +29,9 @@ p {
   box-shadow: 0 0 5mm rgba(0, 0, 0, 0.1);
   position: relative;
 }
+.page:not(:first-child) {
+  padding-top: 7mm;
+}
 
 .no-link {
   color: #000;

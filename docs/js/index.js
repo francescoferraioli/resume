@@ -4,6 +4,8 @@ const pageHeight = 297
 
 const footerMargin = 7;
 
+const pageTopMargin = 7;
+
 const templates = {}
 
 function registerTemplate() {
@@ -44,7 +46,7 @@ function moveContentsIntoPages(contents) {
 
         accumulativeHeight += getHeightInMM(content);
 
-        if(accumulativeHeight + footerHeight > pageHeight) {
+        if(accumulativeHeight + footerHeight + (pageNumber > 1 ? pageTopMargin : 0) > pageHeight) {
             accumulativeHeight = 0;
             pageNumber++;
             page = createPage(pageNumber)
