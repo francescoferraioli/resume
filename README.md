@@ -31,10 +31,13 @@ Contains TypeScript files that are called by the `bin/build` script to undertake
 The output of running the build on the `src` directory. The contents of this folder are not updated manually, just by the build script. The output is composed on two files:
 - `index.html`
 - `index.css`
+- `index.js`
 
 ## src
 
-This contains handlebars (hbs) and SCSS files. These files form the input to the build process to produce `index.html` and `index.css`.
+This contains handlebars (hbs) and SCSS files as wel as a single JS file. These files form the input to the build process to produce `index.html`, `index.css` and `index.js`.
+
+The JS file is simply copied across and its sole purpose is simply to put the contents into pages at runtime.
 
 # Getting Started
 
