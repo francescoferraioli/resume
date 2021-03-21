@@ -4,6 +4,7 @@ import * as Sass from "sass";
 import { getContext } from "./context";
 import partials from "./partials";
 import helpers from "./helpers";
+import { run } from "./utils";
 
 function html() {
   Handlebars.registerPartial("partial", (context) =>
@@ -37,5 +38,10 @@ function css() {
   fs.writeFileSync("docs/css/index.css", dist.css);
 }
 
+function js() {
+  run("cp src/js/index.js docs/js/index.js");
+}
+
 html();
 css();
+js();
