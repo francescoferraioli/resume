@@ -1,3 +1,4 @@
+import * as Handlebars from "handlebars";
 import { HelperDeclareSpec } from "handlebars";
 import { partitionInGroups } from "./utils";
 
@@ -9,6 +10,13 @@ const helpers: HelperDeclareSpec = {
     return `0${first} ${second} ${third}`;
   },
   partitionInGroups,
+  content: function (className, options) {
+    return new Handlebars.SafeString(
+      `<div class="content ${className}">
+        ${options.fn(this)}
+      </div>`
+    );
+  },
 };
 
 export default helpers;
