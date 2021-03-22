@@ -1,7 +1,13 @@
 {{#each markdown}}
-{{#if this}}
-{{#content ../class}}{{{this}}}{{/content}}
-{{else}}
-{{> partial partial="spacer" height=2 }}
-{{/if}}
+{{#switch this.type}} 
+{{#case 'markdown'}}
+{{#content ../class}}{{{this.markdown}}}{{/content}}
+{{/case}} 
+{{#case 'html'}}
+{{#content ../class}}{{{this.html}}}{{/content}}
+{{/case}} 
+{{#case 'line-break'}}
+{{> partial partial="spacer" height=this.height }}
+{{/case}} 
+{{/switch}}
 {{/each}}

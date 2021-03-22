@@ -1,17 +1,18 @@
 import * as fs from "fs";
-import * as md from "markdown-it";
+import { FrankieDownLine, parseMarkdownFile } from "./frankiedown";
 
 const markdownFolder = "src/md/";
 
-const parseMarkdownFile = (name: string): Record<string, string[]> => ({
-  [name.replace(".md", "")]: fs
+const buildMarkdownForFile = (
+  name: string
+): Record<string, FrankieDownLine[]> => ({
+  [name.replace(".fd.md", "")]: fs
     .readFileSync(`${markdownFolder}${name}`, "utf-8")
     .split("\n")
-    .map((x) => (x.startsWith("<") ? x : md().render(x)))
-    .map((x) => x.trimEnd()),
+    .map(parseMarkdownFile),
 });
 
-export const markdown: Record<string, string[]> = fs
+export const markdown: Record<string, FrankieDownLine[]> = fs
   .readdirSync(markdownFolder)
-  .map(parseMarkdownFile)
+  .map(buildMarkdownForFile)
   .reduce(Object.assign, {});
