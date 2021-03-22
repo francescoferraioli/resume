@@ -3,13 +3,11 @@ import { Experience, experiences } from "./experience";
 import { interests } from "./interests";
 import { markdown } from "./markdown";
 import { skillCategories, SkillCategory } from "./skills";
-import { summary } from "./summary";
 
 export interface Context {
   firstName: string;
   lastName: string;
   contactInfo: ContactInfo;
-  summary: string[];
   skillCategories: SkillCategory[];
   interests: string[];
   experiences: Record<string, Experience>;
@@ -21,7 +19,6 @@ export const getContext = (): Context => {
     firstName: "Francesco",
     lastName: "Ferraioli",
     contactInfo,
-    summary,
     skillCategories,
     interests,
     experiences,
