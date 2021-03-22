@@ -19,3 +19,7 @@ export const run = (command: string) => {
     console.log(`stdout: ${stdout}`);
   });
 };
+
+export const assertUnreachable = (_: never): never => {
+  throw new Error("Didn't expect to get here");
+};
