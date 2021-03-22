@@ -1,7 +1,9 @@
-import * as fs from "fs";
-import * as md from "markdown-it";
-
-const markdownFolder = "src/md/";
+import { contactInfo, ContactInfo } from "./contact-info";
+import { Experience, experiences } from "./experience";
+import { interests } from "./interests";
+import { markdown } from "./markdown";
+import { skillCategories, SkillCategory } from "./skills";
+import { summary } from "./summary";
 
 export interface Context {
   firstName: string;
@@ -14,133 +16,15 @@ export interface Context {
   markdown: Record<string, string[]>;
 }
 
-interface ContactInfo {
-  address: string;
-  phone: string;
-  email: string;
-  github: string;
-  linkedIn: string;
-}
-
-interface SkillCategory {
-  heading: string;
-  skills: string[];
-  subcategories: SkillSubcategory[];
-}
-
-interface SkillSubcategory {
-  heading: string;
-  skills: string[];
-}
-
-interface Experience {
-  jobTitle: string;
-  company: string;
-  start: string;
-  end: string;
-}
-
 export const getContext = (): Context => {
   return {
     firstName: "Francesco",
     lastName: "Ferraioli",
-    contactInfo: {
-      address: "Brisbane",
-      phone: "424938538",
-      email: "francesco.ferraioli@outlook.com",
-      github: "francescoferraioli",
-      linkedIn: "ferraiolifrancesco",
-    },
+    contactInfo,
     summary,
     skillCategories,
     interests,
     experiences,
-    markdown: getMarkdown(),
+    markdown,
   };
 };
-
-const getMarkdown = (): Record<string, string[]> =>
-  fs
-    .readdirSync(markdownFolder)
-    .map(parseMarkdownFile)
-    .reduce(Object.assign, {});
-
-const parseMarkdownFile = (name: string): Record<string, string[]> => ({
-  [name.replace(".md", "")]: fs
-    .readFileSync(`${markdownFolder}${name}`, "utf-8")
-    .split("\n")
-    .map((x) => (x.startsWith("<") ? x : md().render(x)))
-    .map((x) => x.trimEnd()),
-});
-
-const summary: string[] = [
-  "I am an extremely passionate full stack engineer favoring .NET (C# / F#) on the backend and React/Angular on the front end whilst having a broad experience in many other technologies.",
-  "I am in love with using functional programming patterns to create intelligent, fast, secure, maintainable, readable, testable and reliable systems.",
-  "I am a strong believer in being in a continuous state of learning as technology continues to rapidly evolve.",
-  "I also believe that working in a team of people with the same passion is paramount.",
-];
-
-const backendSkills: SkillSubcategory = {
-  heading: "Backend",
-  skills: [
-    ".NET Core",
-    "C# / F#",
-    "NUnit / XUnit",
-    "Java",
-    "JUnit",
-    "OData",
-    "Azure",
-    "AWS",
-  ],
-};
-
-const frontendSkills: SkillSubcategory = {
-  heading: "Frontend",
-  skills: ["HTML", "CSS", "JavaScript", "TypeScript", "Angular", "LESS / SASS"],
-};
-
-const otherTechnicalSkills: SkillSubcategory = {
-  heading: "Other",
-  skills: ["GIT", "VIM", "Command Line"],
-};
-
-const technicalSkills: SkillCategory = {
-  heading: "Technical",
-  skills: [],
-  subcategories: [backendSkills, frontendSkills, otherTechnicalSkills],
-};
-
-const personalSkills: SkillCategory = {
-  heading: "Personal",
-  skills: [
-    "Communication",
-    "Fast Learner",
-    "Pragmatic",
-    "Leading",
-    "Honest",
-    "Team Work",
-    "Transparent",
-    "Listening",
-  ],
-  subcategories: [],
-};
-
-const skillCategories: SkillCategory[] = [technicalSkills, personalSkills];
-
-const interests = [
-  "Coding",
-  "Technology",
-  "Chess",
-  "Puzzles",
-  "Sport",
-  "Soccer",
-];
-
-const stacktrace: Experience = {
-  jobTitle: "Senior Software Engineer",
-  company: "Stacktrace",
-  start: "AUGUST 2018",
-  end: "JANUARY 2021",
-};
-
-const experiences: Record<string, Experience> = { stacktrace };
