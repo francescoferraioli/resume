@@ -39,6 +39,8 @@ This contains handlebars (hbs) and SCSS files as wel as a single JS file. These 
 
 The JS file is simply copied across and its sole purpose is simply to put the contents into pages at runtime.
 
+It also contains markdown (md) files which will be loaded into the `context` under the `markdown` property and displayable through the `markdown` partial.
+
 # Getting Started
 
 ## Seeing the result
@@ -59,6 +61,6 @@ yarn
 yarn start:watch
 ```
 
-3. Edit the `hbs` and `scss` files in `src`.
+3. Edit the `hbs`, `scss` and `md` files in `src`. The `js` file should be left untouched.
 
 4. Profit!
