@@ -1,4 +1,5 @@
 import * as md from "markdown-it";
+import { assertUnreachable } from "../utils";
 
 export const parseMarkdownFile = (line: string): FrankieDownLine => {
   if (line.trim() === "") {
@@ -10,6 +11,27 @@ export const parseMarkdownFile = (line: string): FrankieDownLine => {
   }
 
   return createMarkDown(md().render(line).trimEnd());
+};
+
+export const reduceFrankieDownLines = (
+  acc: FrankieDownLine[],
+  line: FrankieDownLine
+): FrankieDownLine[] => {
+  const last = acc[acc.length - 1];
+  switch (line.type) {
+    case "markdown":
+    case "line-break":
+      return [...acc, line];
+    case "html": {
+      if (last?.type === "html") {
+        last.html += line.html;
+        return acc;
+      }
+      return [...acc, line];
+    }
+    default:
+      assertUnreachable(line);
+  }
 };
 
 const createMarkDown = (markdown: string): FrankieDownMarkDown => ({
