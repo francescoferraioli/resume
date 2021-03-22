@@ -1,3 +1,7 @@
 {{#each markdown}}
+{{#if this}}
 {{#content class}}{{{this}}}{{/content}}
+{{else}}
+{{> partial partial="spacer" height=2 }}
+{{/if}}
 {{/each}}
