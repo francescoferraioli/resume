@@ -7,7 +7,7 @@ export interface MarkDownSpacer {
 }
 
 export class MarkDownSpacerRenderer extends MarkDownRenderer {
-  static type: "spacer" = "spacer";
+  static type: MarkDownSpacer["type"] = "spacer";
 
   constructor(contents: string) {
     super(contents);

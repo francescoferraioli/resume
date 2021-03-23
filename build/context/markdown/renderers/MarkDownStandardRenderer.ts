@@ -8,7 +8,7 @@ export interface MarkDownStandard {
 }
 
 export class MarkDownStandardRenderer extends MarkDownRenderer {
-  static type: "standard" = "standard";
+  static type: MarkDownStandard["type"] = "standard";
 
   constructor(contents: string) {
     super(contents);

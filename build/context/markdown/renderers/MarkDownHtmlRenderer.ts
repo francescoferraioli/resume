@@ -7,7 +7,7 @@ export interface MarkDownHtml {
 }
 
 export class MarkDownHtmlRenderer extends MarkDownRenderer {
-  static type: "html" = "html";
+  static type: MarkDownHtml["type"] = "html";
 
   constructor(contents: string) {
     super(contents);
