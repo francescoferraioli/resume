@@ -42,6 +42,13 @@ function js() {
   run("cp src/js/index.js docs/js/index.js");
 }
 
-html();
-css();
-js();
+try {
+  html();
+  css();
+  js();
+} catch (e) {
+  console.log("*****BUILD FAILED!****");
+  throw e;
+}
+
+console.log("*****BUILD SUCCEEDED!****");
