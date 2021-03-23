@@ -40,6 +40,10 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
       const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
       switch (line.type) {
         case "text":
+          if (currentRenderer) {
+            currentRenderer.addContent(line.line);
+            return acc;
+          }
           return [...acc, getRendererForText(line.line).render()];
         case "instruction": {
           switch (line.instruction.instruction) {
@@ -47,6 +51,7 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
               blockRendererStack.push(
                 getRendererFromType(line.instruction.renderer, line.lineNumber)
               );
+              return acc;
             }
             case "end-block": {
               if (currentRenderer === undefined) {
@@ -61,9 +66,9 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
                 );
               }
               blockRendererStack.pop();
+              return [...acc, currentRenderer.render()];
             }
           }
-          return acc;
         }
         default:
           assertUnreachable(line);
