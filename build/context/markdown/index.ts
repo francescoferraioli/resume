@@ -32,7 +32,7 @@ const buildMarkdownForFile = (
 
 const parseMarkdownFile = (file: string): MarkDownRendered[] => {
   const blockRendererStack: MarkDownRenderer[] = [];
-  return fs
+  const rendered = fs
     .readFileSync(file, "utf-8")
     .split("\n")
     .map(mapToMarkDownLine)
@@ -74,6 +74,16 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
           assertUnreachable(line);
       }
     }, []);
+
+  if (blockRendererStack.length > 0) {
+    throw new Error(
+      `Found start-block(s) without a matching end-block(s): ${blockRendererStack.map(
+        getRendererType
+      )}`
+    );
+  }
+
+  return rendered;
 };
 
 const mapToMarkDownLine = (line: string, index: number): MarkDownLine => {
