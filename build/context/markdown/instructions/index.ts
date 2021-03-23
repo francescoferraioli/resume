@@ -14,6 +14,7 @@ export const parseInstruction = (
 ): MarkDownInstruction => {
   const [, type, rest] = line.split(":");
   return {
+    lineNumber,
     type: "instruction",
     instruction: getInstructionType(type, rest, lineNumber),
   };
@@ -37,6 +38,7 @@ const getInstructionType = (
 };
 
 export type MarkDownInstruction = {
+  lineNumber: number;
   type: "instruction";
   instruction: MarkDownStartBlock | MarkDownEndBlock;
 };

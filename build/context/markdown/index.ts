@@ -13,11 +13,10 @@ import {
 } from "./renderers";
 import { MarkDownRenderer } from "./renderers/MarkDownRenderer";
 
-export type MarkDownLine = (MarkDownText | MarkDownInstruction) & {
-  lineNumber: number;
-};
+export type MarkDownLine = MarkDownText | MarkDownInstruction;
 
 interface MarkDownText {
+  lineNumber: number;
   type: "text";
   line: string;
 }
@@ -52,16 +51,13 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
 const mapToMarkDownLine = (line: string, index: number): MarkDownLine => {
   const lineNumber = index + 1;
   if (isInstruction(line)) {
-    return {
-      ...parseInstruction(line, lineNumber),
-      lineNumber,
-    };
+    return parseInstruction(line, lineNumber);
   }
 
   return {
+    lineNumber,
     type: "text",
     line,
-    lineNumber,
   };
 };
 
