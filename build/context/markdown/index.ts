@@ -20,18 +20,22 @@ const mapToMarkDownLine = (line: string): MarkDownLine => {
   };
 };
 
-const parseMarkdownFile = (lines: string[]): MarkDownRendered[] => {
-  return lines.map(mapToMarkDownLine).reduce((acc, line) => {
-    switch (line.type) {
-      case "text":
-        return [...acc, getRendererForText(line.line).render()];
-      case "instruction": {
-        return acc;
+const parseMarkdownFile = (file: string): MarkDownRendered[] => {
+  return fs
+    .readFileSync(file, "utf-8")
+    .split("\n")
+    .map(mapToMarkDownLine)
+    .reduce((acc, line) => {
+      switch (line.type) {
+        case "text":
+          return [...acc, getRendererForText(line.line).render()];
+        case "instruction": {
+          return acc;
+        }
+        default:
+          assertUnreachable(line);
       }
-      default:
-        assertUnreachable(line);
-    }
-  }, []);
+    }, []);
 };
 
 export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
@@ -61,9 +65,7 @@ interface MarkDownText {
 const buildMarkdownForFile = (
   name: string
 ): Record<string, MarkDownRendered[]> => ({
-  [name.replace(".md", "")]: parseMarkdownFile(
-    fs.readFileSync(`${markdownFolder}${name}`, "utf-8").split("\n")
-  ),
+  [name.replace(".md", "")]: parseMarkdownFile(`${markdownFolder}${name}`),
 });
 
 export const markdown: Record<string, MarkDownRendered[]> = fs
