@@ -1,6 +1,6 @@
 import * as fs from "fs";
 import * as md from "markdown-it";
-import { assertUnreachable } from "../utils";
+import { assertUnreachable } from "../../utils";
 
 abstract class MarkDownRenderer {
   constructor(protected contents: string) {}
