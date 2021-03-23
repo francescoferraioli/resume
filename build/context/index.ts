@@ -1,7 +1,8 @@
 import { contactInfo, ContactInfo } from "./contact-info";
 import { Experience, experiences } from "./experience";
 import { interests } from "./interests";
-import { markdown, MarkDownRendered } from "./markdown";
+import { markdown } from "./markdown";
+import { MarkDownRendered } from "./markdown/renderers";
 import { skillCategories, SkillCategory } from "./skills";
 
 export interface Context {

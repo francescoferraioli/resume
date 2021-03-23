@@ -1,5 +1,10 @@
 import { MarkDownRenderer } from "./MarkDownRenderer";
-import { MarkDownRendered } from "..";
+import { MarkDownRendered } from ".";
+
+export interface MarkDownHtml {
+  type: "html";
+  html: string;
+}
 
 export class MarkDownHtmlRenderer extends MarkDownRenderer {
   static type: "html" = "html";

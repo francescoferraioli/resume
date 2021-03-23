@@ -1,4 +1,4 @@
-import { MarkDownRendered } from "..";
+import { MarkDownRendered } from ".";
 
 export abstract class MarkDownRenderer {
   constructor(protected contents: string) {}

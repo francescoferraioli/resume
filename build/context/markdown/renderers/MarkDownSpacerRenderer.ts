@@ -1,5 +1,10 @@
 import { MarkDownRenderer } from "./MarkDownRenderer";
-import { MarkDownRendered } from "..";
+import { MarkDownRendered } from ".";
+
+export interface MarkDownSpacer {
+  type: "spacer";
+  height: number;
+}
 
 export class MarkDownSpacerRenderer extends MarkDownRenderer {
   static type: "spacer" = "spacer";

@@ -1,7 +1,15 @@
-import { MarkDownHtmlRenderer } from "./MarkDownHtmlRenderer";
+import { MarkDownHtml, MarkDownHtmlRenderer } from "./MarkDownHtmlRenderer";
 import { MarkDownRenderer } from "./MarkDownRenderer";
-import { MarkDownSpacerRenderer } from "./MarkDownSpacerRenderer";
-import { MarkDownStandardRenderer } from "./MarkDownStandardRenderer";
+import {
+  MarkDownSpacer,
+  MarkDownSpacerRenderer,
+} from "./MarkDownSpacerRenderer";
+import {
+  MarkDownStandard,
+  MarkDownStandardRenderer,
+} from "./MarkDownStandardRenderer";
+
+export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
 
 const renderers = [
   MarkDownStandardRenderer,

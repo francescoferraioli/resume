@@ -9,25 +9,9 @@ import {
   getRendererForText,
   getRendererFromType,
   getRendererType,
+  MarkDownRendered,
 } from "./renderers";
 import { MarkDownRenderer } from "./renderers/MarkDownRenderer";
-
-export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
-
-interface MarkDownStandard {
-  type: "standard";
-  markdown: string;
-}
-
-interface MarkDownHtml {
-  type: "html";
-  html: string;
-}
-
-interface MarkDownSpacer {
-  type: "spacer";
-  height: number;
-}
 
 export type MarkDownLine = MarkDownText | MarkDownInstruction;
 
