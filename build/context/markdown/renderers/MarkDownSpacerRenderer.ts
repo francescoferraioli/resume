@@ -9,8 +9,8 @@ export interface MarkDownSpacer {
 export class MarkDownSpacerRenderer extends MarkDownRenderer {
   static type: MarkDownSpacer["type"] = "spacer";
 
-  constructor(contents: string) {
-    super(contents);
+  constructor(content?: string) {
+    super(content);
   }
 
   render(): MarkDownRendered {

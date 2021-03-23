@@ -1,7 +1,15 @@
 import { MarkDownRendered } from ".";
 
 export abstract class MarkDownRenderer {
-  constructor(protected contents: string) {}
+  protected contents: string[];
+
+  constructor(content: string | undefined) {
+    this.contents = [].concat(content ?? []);
+  }
 
   abstract render(): MarkDownRendered;
+
+  get content() {
+    return this.contents.join("\n");
+  }
 }

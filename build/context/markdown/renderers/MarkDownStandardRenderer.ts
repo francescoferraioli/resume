@@ -10,14 +10,14 @@ export interface MarkDownStandard {
 export class MarkDownStandardRenderer extends MarkDownRenderer {
   static type: MarkDownStandard["type"] = "standard";
 
-  constructor(contents: string) {
-    super(contents);
+  constructor(content?: string) {
+    super(content);
   }
 
   render(): MarkDownRendered {
     return {
       type: MarkDownStandardRenderer.type,
-      markdown: new md().render(this.contents).trimEnd(),
+      markdown: new md().render(this.content).trimEnd(),
     };
   }
 }

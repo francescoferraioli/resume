@@ -39,7 +39,7 @@ export const getRendererFromType = (
   for (let i = 0; i < renderers.length; i++) {
     const renderer = renderers[i];
     if (type === renderer.type) {
-      return new renderer("");
+      return new renderer();
     }
   }
   throw new Error(`Unsupported renderer: ${type}. ${lineNumber}`);

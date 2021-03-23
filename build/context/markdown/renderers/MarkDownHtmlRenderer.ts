@@ -9,14 +9,14 @@ export interface MarkDownHtml {
 export class MarkDownHtmlRenderer extends MarkDownRenderer {
   static type: MarkDownHtml["type"] = "html";
 
-  constructor(contents: string) {
-    super(contents);
+  constructor(content?: string) {
+    super(content);
   }
 
   render(): MarkDownRendered {
     return {
       type: MarkDownHtmlRenderer.type,
-      html: this.contents,
+      html: this.content,
     };
   }
 }
