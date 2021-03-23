@@ -44,23 +44,23 @@ p {
     > div {
         width: 33%;
     }
+}
 
-    ul {
-        margin: 0;
-        padding-left: 5mm;
-        list-style: none;
+ul {
+    margin: 0;
+    padding-left: 5mm;
+    list-style: none;
 
-        > li {
-            padding-bottom: 1mm;
+    > li {
+        padding-bottom: 1mm;
 
-            &::before {
-                content: "\2022";
-                color: rgb(35, 140, 182);
-                font-weight: bold;
-                display: inline-block;
-                width: 1em;
-                margin-left: -1em;
-            }
+        &::before {
+            content: "\2022";
+            color: rgb(35, 140, 182);
+            font-weight: bold;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1em;
         }
     }
 }
