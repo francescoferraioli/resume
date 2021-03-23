@@ -5,7 +5,12 @@ import {
   MarkDownInstruction,
   parseInstruction,
 } from "./instructions";
-import { getRendererForText } from "./renderers";
+import {
+  getRendererForText,
+  getRendererFromType,
+  getRendererType,
+} from "./renderers";
+import { MarkDownRenderer } from "./renderers/MarkDownRenderer";
 
 export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
 
@@ -40,15 +45,38 @@ const buildMarkdownForFile = (
 });
 
 const parseMarkdownFile = (file: string): MarkDownRendered[] => {
+  const blockRendererStack: MarkDownRenderer[] = [];
   return fs
     .readFileSync(file, "utf-8")
     .split("\n")
     .map(mapToMarkDownLine)
     .reduce((acc, line) => {
+      const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
       switch (line.type) {
         case "text":
           return [...acc, getRendererForText(line.line).render()];
         case "instruction": {
+          switch (line.instruction.instruction) {
+            case "start-block": {
+              blockRendererStack.push(
+                getRendererFromType(line.instruction.renderer)
+              );
+            }
+            case "end-block": {
+              if (currentRenderer === undefined) {
+                throw new Error(
+                  "Found end-block without a matching start-block"
+                );
+              }
+              const currentRendererType = getRendererType(currentRenderer);
+              if (currentRendererType !== line.instruction.renderer) {
+                throw new Error(
+                  `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'`
+                );
+              }
+              blockRendererStack.pop();
+            }
+          }
           return acc;
         }
         default:

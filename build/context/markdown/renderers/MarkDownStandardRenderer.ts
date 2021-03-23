@@ -3,13 +3,15 @@ import { MarkDownRenderer } from "./MarkDownRenderer";
 import { MarkDownRendered } from "..";
 
 export class MarkDownStandardRenderer extends MarkDownRenderer {
+  static type: "standard" = "standard";
+
   constructor(contents: string) {
     super(contents);
   }
 
   render(): MarkDownRendered {
     return {
-      type: "standard",
+      type: MarkDownStandardRenderer.type,
       markdown: new md().render(this.contents).trimEnd(),
     };
   }
