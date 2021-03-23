@@ -12,4 +12,8 @@ export abstract class MarkDownRenderer {
   get content() {
     return this.contents.join("\n");
   }
+
+  addContent(content: string) {
+    this.contents.push(content);
+  }
 }
