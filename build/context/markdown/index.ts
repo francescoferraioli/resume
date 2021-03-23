@@ -36,44 +36,7 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
     .readFileSync(file, "utf-8")
     .split("\n")
     .map(mapToMarkDownLine)
-    .reduce((acc, line) => {
-      const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
-      switch (line.type) {
-        case "text":
-          if (currentRenderer) {
-            currentRenderer.addContent(line.line);
-            return acc;
-          }
-          return [...acc, getRendererForText(line.line).render()];
-        case "instruction": {
-          switch (line.instruction.instruction) {
-            case "start-block": {
-              blockRendererStack.push(
-                getRendererFromType(line.instruction.renderer, line.lineNumber)
-              );
-              return acc;
-            }
-            case "end-block": {
-              if (currentRenderer === undefined) {
-                throw new Error(
-                  `Found end-block without a matching start-block. #${line.lineNumber}`
-                );
-              }
-              const currentRendererType = getRendererType(currentRenderer);
-              if (currentRendererType !== line.instruction.renderer) {
-                throw new Error(
-                  `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
-                );
-              }
-              blockRendererStack.pop();
-              return [...acc, currentRenderer.render()];
-            }
-          }
-        }
-        default:
-          assertUnreachable(line);
-      }
-    }, []);
+    .reduce(renderLines(blockRendererStack), []);
 
   if (blockRendererStack.length > 0) {
     throw new Error(
@@ -100,6 +63,48 @@ const mapToMarkDownLine = (line: string, index: number): MarkDownLine => {
     line,
     lineNumber,
   };
+};
+
+const renderLines = (blockRendererStack: MarkDownRenderer[]) => (
+  acc: MarkDownRendered[],
+  line: MarkDownLine
+): MarkDownRendered[] => {
+  const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
+  switch (line.type) {
+    case "text":
+      if (currentRenderer) {
+        currentRenderer.addContent(line.line);
+        return acc;
+      }
+      return [...acc, getRendererForText(line.line).render()];
+    case "instruction": {
+      switch (line.instruction.instruction) {
+        case "start-block": {
+          blockRendererStack.push(
+            getRendererFromType(line.instruction.renderer, line.lineNumber)
+          );
+          return acc;
+        }
+        case "end-block": {
+          if (currentRenderer === undefined) {
+            throw new Error(
+              `Found end-block without a matching start-block. #${line.lineNumber}`
+            );
+          }
+          const currentRendererType = getRendererType(currentRenderer);
+          if (currentRendererType !== line.instruction.renderer) {
+            throw new Error(
+              `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
+            );
+          }
+          blockRendererStack.pop();
+          return [...acc, currentRenderer.render()];
+        }
+      }
+    }
+    default:
+      assertUnreachable(line);
+  }
 };
 
 export const markdown: Record<string, MarkDownRendered[]> = fs
