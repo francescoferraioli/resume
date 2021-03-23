@@ -1,85 +1,17 @@
 import * as fs from "fs";
-import * as md from "markdown-it";
 import { assertUnreachable } from "../../utils";
-
-abstract class MarkDownRenderer {
-  constructor(protected contents: string) {}
-
-  abstract render(): MarkDownRendered;
-}
-
-class MarkDownStandardRenderer extends MarkDownRenderer {
-  constructor(contents: string) {
-    super(contents);
-  }
-
-  render(): MarkDownRendered {
-    return {
-      type: "standard",
-      markdown: new md().render(this.contents).trimEnd(),
-    };
-  }
-}
-
-class MarkDownHtmlRenderer extends MarkDownRenderer {
-  constructor(contents: string) {
-    super(contents);
-  }
-
-  render(): MarkDownRendered {
-    return {
-      type: "html",
-      html: this.contents,
-    };
-  }
-}
-
-class MarkDownSpacerRenderer extends MarkDownRenderer {
-  constructor(contents: string) {
-    super(contents);
-  }
-
-  render(): MarkDownRendered {
-    return {
-      type: "spacer",
-      height: 2,
-    };
-  }
-}
+import {
+  isInstruction,
+  MarkDownInstruction,
+  parseInstruction,
+} from "./instructions";
+import { getRendererForText } from "./renderers";
 
 const markdownFolder = "src/md/";
 
-const mdInstructions: Record<
-  string,
-  MarkDownInstruction["instruction"]["instruction"]
-> = {
-  startBlock: "start-block",
-  endBlock: "end-block",
-};
-
-const parseMdInstuction = (
-  type: string,
-  rest: string
-): MarkDownInstruction["instruction"] => {
-  switch (type) {
-    case mdInstructions.startBlock:
-    case mdInstructions.endBlock:
-      return {
-        instruction: type,
-        renderer: rest,
-      };
-    default:
-      throw new Error(`Unsupported instruction type: ${type}`);
-  }
-};
-
 const mapToMarkDownLine = (line: string): MarkDownLine => {
-  if (line.startsWith("md:")) {
-    const [, type, rest] = line.split(":");
-    return {
-      type: "instruction",
-      instruction: parseMdInstuction(type, rest),
-    };
+  if (isInstruction(line)) {
+    return parseInstruction(line);
   }
 
   return {
@@ -102,18 +34,6 @@ const parseMarkdownFile = (lines: string[]): MarkDownRendered[] => {
   }, []);
 };
 
-const getRendererForText = (text: string): MarkDownRenderer => {
-  if (text.trim() === "") {
-    return new MarkDownSpacerRenderer(text);
-  }
-
-  if (text.trim().startsWith("<")) {
-    return new MarkDownHtmlRenderer(text);
-  }
-
-  return new MarkDownStandardRenderer(text);
-};
-
 export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
 
 interface MarkDownStandard {
@@ -133,24 +53,9 @@ interface MarkDownSpacer {
 
 export type MarkDownLine = MarkDownText | MarkDownInstruction;
 
-export type MarkDownInstruction = {
-  type: "instruction";
-  instruction: MarkDownStartBlock | MarkDownEndBlock;
-};
-
 interface MarkDownText {
   type: "text";
   line: string;
-}
-
-interface MarkDownStartBlock {
-  instruction: "start-block";
-  renderer: string;
-}
-
-interface MarkDownEndBlock {
-  instruction: "end-block";
-  renderer: string;
 }
 
 const buildMarkdownForFile = (
