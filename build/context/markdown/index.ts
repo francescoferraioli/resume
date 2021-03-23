@@ -45,19 +45,19 @@ const parseMarkdownFile = (file: string): MarkDownRendered[] => {
           switch (line.instruction.instruction) {
             case "start-block": {
               blockRendererStack.push(
-                getRendererFromType(line.instruction.renderer)
+                getRendererFromType(line.instruction.renderer, line.lineNumber)
               );
             }
             case "end-block": {
               if (currentRenderer === undefined) {
                 throw new Error(
-                  "Found end-block without a matching start-block"
+                  `Found end-block without a matching start-block. #${line.lineNumber}`
                 );
               }
               const currentRendererType = getRendererType(currentRenderer);
               if (currentRendererType !== line.instruction.renderer) {
                 throw new Error(
-                  `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'`
+                  `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
                 );
               }
               blockRendererStack.pop();
@@ -75,7 +75,7 @@ const mapToMarkDownLine = (line: string, index: number): MarkDownLine => {
   const lineNumber = index + 1;
   if (isInstruction(line)) {
     return {
-      ...parseInstruction(line),
+      ...parseInstruction(line, lineNumber),
       lineNumber,
     };
   }

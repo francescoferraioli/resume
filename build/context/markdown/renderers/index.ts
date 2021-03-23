@@ -32,12 +32,15 @@ export const getRendererForText = (text: string): MarkDownRenderer => {
   return new MarkDownStandardRenderer(text);
 };
 
-export const getRendererFromType = (type: string): MarkDownRenderer => {
+export const getRendererFromType = (
+  type: string,
+  lineNumber: number
+): MarkDownRenderer => {
   for (let i = 0; i < renderers.length; i++) {
     const renderer = renderers[i];
     if (type === renderer.type) {
       return new renderer("");
     }
   }
-  throw new Error(`Unsupported renderer: ${type}`);
+  throw new Error(`Unsupported renderer: ${type}. ${lineNumber}`);
 };

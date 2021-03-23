@@ -8,17 +8,21 @@ const instructions: Record<
 
 export const isInstruction = (line: string): boolean => line.startsWith("md:");
 
-export const parseInstruction = (line: string): MarkDownInstruction => {
+export const parseInstruction = (
+  line: string,
+  lineNumber: number
+): MarkDownInstruction => {
   const [, type, rest] = line.split(":");
   return {
     type: "instruction",
-    instruction: getInstructionType(type, rest),
+    instruction: getInstructionType(type, rest, lineNumber),
   };
 };
 
 const getInstructionType = (
   type: string,
-  rest: string
+  rest: string,
+  lineNumber: number
 ): MarkDownInstruction["instruction"] => {
   switch (type) {
     case instructions.startBlock:
@@ -28,7 +32,7 @@ const getInstructionType = (
         renderer: rest,
       };
     default:
-      throw new Error(`Unsupported instruction type: ${type}`);
+      throw new Error(`Unsupported instruction type: ${type}. #${lineNumber}`);
   }
 };
 
