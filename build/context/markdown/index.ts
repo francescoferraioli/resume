@@ -30,11 +30,12 @@ const buildMarkdownForFile = (
   [name.replace(".md", "")]: parseMarkdownFile(`${markdownFolder}${name}`),
 });
 
-const parseMarkdownFile = (file: string): MarkDownRendered[] => {
+const parseMarkdownFile = (file: string): MarkDownRendered[] =>
+  parseMarkdownLines(fs.readFileSync(file, "utf-8").split("\n"));
+
+const parseMarkdownLines = (lines: string[]): MarkDownRendered[] => {
   const blockRendererStack: MarkDownRenderer[] = [];
-  const rendered = fs
-    .readFileSync(file, "utf-8")
-    .split("\n")
+  const rendered = lines
     .map(mapToMarkDownLine)
     .reduce(renderLines(blockRendererStack), []);
 
