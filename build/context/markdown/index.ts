@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import { last } from "lodash";
 import { assertUnreachable } from "../../utils";
 import {
   isInstruction,
@@ -65,21 +66,21 @@ const renderLines = (blockRendererStack: MarkDownRenderer[]) => (
   acc: MarkDownRendered[],
   line: MarkDownLine
 ): MarkDownRendered[] => {
-  const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
   switch (line.type) {
     case "text":
-      return renderText(currentRenderer)(acc, line.line);
+      return renderText(blockRendererStack)(acc, line.line);
     case "instruction":
-      return renderInstruction(blockRendererStack, currentRenderer)(acc, line);
+      return renderInstruction(blockRendererStack)(acc, line);
     default:
       assertUnreachable(line);
   }
 };
 
-const renderText = (currentRenderer: MarkDownRenderer | undefined) => (
+const renderText = (blockRendererStack: MarkDownRenderer[]) => (
   acc: MarkDownRendered[],
   line: string
 ): MarkDownRendered[] => {
+  const currentRenderer = last(blockRendererStack);
   if (currentRenderer) {
     currentRenderer.addContent(line);
     return acc;
@@ -87,13 +88,11 @@ const renderText = (currentRenderer: MarkDownRenderer | undefined) => (
   return [...acc, getRendererForText(line).render()];
 };
 
-const renderInstruction = (
-  blockRendererStack: MarkDownRenderer[],
-  currentRenderer: MarkDownRenderer | undefined
-) => (
+const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
   acc: MarkDownRendered[],
   line: MarkDownInstruction
 ): MarkDownRendered[] => {
+  const currentRenderer = last(blockRendererStack);
   switch (line.instruction.instruction) {
     case "start-block": {
       blockRendererStack.push(
