@@ -68,38 +68,54 @@ const renderLines = (blockRendererStack: MarkDownRenderer[]) => (
   const currentRenderer = blockRendererStack[blockRendererStack.length - 1];
   switch (line.type) {
     case "text":
-      if (currentRenderer) {
-        currentRenderer.addContent(line.line);
-        return acc;
-      }
-      return [...acc, getRendererForText(line.line).render()];
-    case "instruction": {
-      switch (line.instruction.instruction) {
-        case "start-block": {
-          blockRendererStack.push(
-            getRendererFromType(line.instruction.renderer, line.lineNumber)
-          );
-          return acc;
-        }
-        case "end-block": {
-          if (currentRenderer === undefined) {
-            throw new Error(
-              `Found end-block without a matching start-block. #${line.lineNumber}`
-            );
-          }
-          const currentRendererType = getRendererType(currentRenderer);
-          if (currentRendererType !== line.instruction.renderer) {
-            throw new Error(
-              `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
-            );
-          }
-          blockRendererStack.pop();
-          return [...acc, currentRenderer.render()];
-        }
-      }
-    }
+      return renderText(currentRenderer)(acc, line.line);
+    case "instruction":
+      return renderInstruction(blockRendererStack, currentRenderer)(acc, line);
     default:
       assertUnreachable(line);
+  }
+};
+
+const renderText = (currentRenderer: MarkDownRenderer | undefined) => (
+  acc: MarkDownRendered[],
+  line: string
+): MarkDownRendered[] => {
+  if (currentRenderer) {
+    currentRenderer.addContent(line);
+    return acc;
+  }
+  return [...acc, getRendererForText(line).render()];
+};
+
+const renderInstruction = (
+  blockRendererStack: MarkDownRenderer[],
+  currentRenderer: MarkDownRenderer | undefined
+) => (
+  acc: MarkDownRendered[],
+  line: MarkDownInstruction
+): MarkDownRendered[] => {
+  switch (line.instruction.instruction) {
+    case "start-block": {
+      blockRendererStack.push(
+        getRendererFromType(line.instruction.renderer, line.lineNumber)
+      );
+      return acc;
+    }
+    case "end-block": {
+      if (currentRenderer === undefined) {
+        throw new Error(
+          `Found end-block without a matching start-block. #${line.lineNumber}`
+        );
+      }
+      const currentRendererType = getRendererType(currentRenderer);
+      if (currentRendererType !== line.instruction.renderer) {
+        throw new Error(
+          `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
+        );
+      }
+      blockRendererStack.pop();
+      return [...acc, currentRenderer.render()];
+    }
   }
 };
 
