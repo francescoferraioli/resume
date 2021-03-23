@@ -5,16 +5,20 @@ const markdownFolder = "src/md/";
 import * as md from "markdown-it";
 import { assertUnreachable } from "../utils";
 
-const parseMarkdownFile = (line: string): MarkDownLine => {
-  if (line.trim() === "") {
-    return createLineBreak(2);
-  }
+const parseMarkdownFile = (lines: string[]): MarkDownLine[] => {
+  const parseMarkdownLine = (line: string): MarkDownLine => {
+    if (line.trim() === "") {
+      return createLineBreak(2);
+    }
 
-  if (line.trim().startsWith("<")) {
-    return createHtml(line);
-  }
+    if (line.trim().startsWith("<")) {
+      return createHtml(line);
+    }
 
-  return createMarkDown(md().render(line).trimEnd());
+    return createMarkDown(md().render(line).trimEnd());
+  };
+
+  return lines.map(parseMarkdownLine);
 };
 
 const reduceMarkDownLines = (
@@ -73,11 +77,9 @@ interface MarkDownLineBreak {
 const buildMarkdownForFile = (
   name: string
 ): Record<string, MarkDownLine[]> => ({
-  [name.replace(".md", "")]: fs
-    .readFileSync(`${markdownFolder}${name}`, "utf-8")
-    .split("\n")
-    .map(parseMarkdownFile)
-    .reduce(reduceMarkDownLines, []),
+  [name.replace(".md", "")]: parseMarkdownFile(
+    fs.readFileSync(`${markdownFolder}${name}`, "utf-8").split("\n")
+  ).reduce(reduceMarkDownLines, []),
 });
 
 export const markdown: Record<string, MarkDownLine[]> = fs
