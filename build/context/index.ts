@@ -1,8 +1,7 @@
 import { contactInfo, ContactInfo } from "./contact-info";
 import { Experience, experiences } from "./experience";
-import { FrankieDownLine } from "./frankiedown";
 import { interests } from "./interests";
-import { markdown } from "./markdown";
+import { markdown, MarkDownLine } from "./markdown";
 import { skillCategories, SkillCategory } from "./skills";
 
 export interface Context {
@@ -12,7 +11,7 @@ export interface Context {
   skillCategories: SkillCategory[];
   interests: string[];
   experiences: Record<string, Experience>;
-  markdown: Record<string, FrankieDownLine[]>;
+  markdown: Record<string, MarkDownLine[]>;
 }
 
 export const getContext = (): Context => {
