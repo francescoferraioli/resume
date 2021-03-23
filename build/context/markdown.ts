@@ -15,7 +15,7 @@ const parseMarkdownFile = (lines: string[]): MarkDownLine[] => {
       return createHtml(line);
     }
 
-    return createMarkDown(md().render(line).trimEnd());
+    return createMarkDown(line);
   };
 
   return lines.map(parseMarkdownLine);
@@ -42,14 +42,14 @@ const reduceMarkDownLines = (
   }
 };
 
-const createMarkDown = (markdown: string): MarkDownStandard => ({
+const createMarkDown = (line: string): MarkDownStandard => ({
   type: "markdown",
-  markdown,
+  markdown: md().render(line).trimEnd(),
 });
 
-const createHtml = (html: string): MarkDownHtml => ({
+const createHtml = (line: string): MarkDownHtml => ({
   type: "html",
-  html,
+  html: line,
 });
 
 const createLineBreak = (height: number): MarkDownLineBreak => ({
