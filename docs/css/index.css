@@ -149,6 +149,9 @@ ul > li li::before {
   margin-top: 0.5mm;
 }
 
+.heading.experience {
+  padding-bottom: 3mm;
+}
 .heading.experience > .icon > i.fa {
   margin-top: 0.5mm;
 }
