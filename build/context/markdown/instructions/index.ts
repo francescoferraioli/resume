@@ -17,6 +17,7 @@ export const parseInstruction = (
     lineNumber,
     type: "instruction",
     instruction: getInstructionType(type, rest, lineNumber),
+    line: line,
   };
 };
 
@@ -41,6 +42,7 @@ export type MarkDownInstruction = {
   lineNumber: number;
   type: "instruction";
   instruction: MarkDownStartBlock | MarkDownEndBlock;
+  line: string;
 };
 
 interface MarkDownStartBlock {
