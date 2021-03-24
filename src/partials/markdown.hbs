@@ -1,10 +1,18 @@
 {{#each markdown}}
     {{#switch this.type}} 
         {{#case 'standard'}}
-            {{#content ../class}}{{{this.markdown}}}{{/content}}
+            {{#if ../alreadyContent}}
+                {{{this.markdown}}}
+            {{else}}
+                {{#content ../class}}{{{this.markdown}}}{{/content}}
+            {{/if}}
         {{/case}} 
         {{#case 'html'}}
-            {{#content ../class}}{{{this.html}}}{{/content}}
+            {{#if ../alreadyContent}}
+                {{{this.html}}}
+            {{else}}
+                {{#content ../class}}{{{this.html}}}{{/content}}
+            {{/if}}
         {{/case}} 
         {{#case 'spacer'}}
             {{> partial partial="spacer" height=this.height }}
@@ -14,7 +22,7 @@
             <div style="display:flex">
                 {{#each this.columns}}
                     <div style="width: {{getPercentage ../this.columns.length}}%">
-                    {{{this.markdown}}}
+                    {{> partial partial="markdown" markdown=(toArray this) alreadyContent=true }}
                     </div>
                 {{/each}}
             </div>

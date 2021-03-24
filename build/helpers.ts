@@ -27,6 +27,7 @@ const helpers: HelperDeclareSpec = {
     }
   },
   getPercentage: (count: number) => 100 / count,
+  toArray: (x: any) => [x],
 };
 
 export default helpers;
