@@ -2,6 +2,10 @@ import { last } from "lodash";
 import { assertUnreachable } from "../../../utils";
 import { MarkDownInstruction } from "../instructions";
 import { MarkDownLine } from "../parsers";
+import {
+  MarkDownColumn,
+  MarkDownColumnRenderer,
+} from "./MarkDownColumnRenderer";
 import { MarkDownHtml, MarkDownHtmlRenderer } from "./MarkDownHtmlRenderer";
 import { MarkDownRenderer } from "./MarkDownRenderer";
 import {
@@ -13,12 +17,17 @@ import {
   MarkDownStandardRenderer,
 } from "./MarkDownStandardRenderer";
 
-export type MarkDownRendered = MarkDownStandard | MarkDownHtml | MarkDownSpacer;
+export type MarkDownRendered =
+  | MarkDownStandard
+  | MarkDownHtml
+  | MarkDownSpacer
+  | MarkDownColumn;
 
 const renderers = [
   MarkDownStandardRenderer,
   MarkDownHtmlRenderer,
   MarkDownSpacerRenderer,
+  MarkDownColumnRenderer,
 ];
 
 export const getRendererType = (renderer: MarkDownRenderer) =>

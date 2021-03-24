@@ -18,7 +18,7 @@ interface MarkDownText {
 export const parseMarkdownFile = (file: string): MarkDownRendered[] =>
   parseMarkdownLines(fs.readFileSync(file, "utf-8").split("\n"));
 
-const parseMarkdownLines = (lines: string[]): MarkDownRendered[] => {
+export const parseMarkdownLines = (lines: string[]): MarkDownRendered[] => {
   const blockRendererStack: MarkDownRenderer[] = [];
   const rendered = lines
     .map(parseToMarkDownLine)
