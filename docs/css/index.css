@@ -62,6 +62,9 @@ ul > li::before {
   width: 1em;
   margin-left: -1em;
 }
+ul > li li::before {
+  content: "-";
+}
 
 .header {
   border-radius: 0.5mm;
