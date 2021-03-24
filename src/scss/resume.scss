@@ -37,15 +37,6 @@ p {
     text-decoration: none;
 }
 
-.list-of-lists {
-    display: flex;
-    justify-content: space-between;
-
-    > div {
-        width: 33%;
-    }
-}
-
 ul {
     margin: 0;
     padding-left: 5mm;
