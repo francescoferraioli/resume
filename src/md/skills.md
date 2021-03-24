@@ -3,7 +3,7 @@
 Backend
 md:start-block:column
 md:start-block:standard
-- .NET (Core and Framework)
+- .NET Core
 - C# / F#
 - NUnit / XUnit
 md:end-block:standard
