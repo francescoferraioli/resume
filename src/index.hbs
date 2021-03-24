@@ -20,19 +20,19 @@
 
         {{>partial partial="markdown" markdown=markdown.summary class="summary"}}
 
-        {{> partial partial="spacer" height=10 }}
+        {{> partial partial="spacer" height=7 }}
 
         {{> partial partial="heading" class="skills" name="skills" icon="wrench" }}
 
-        {{#content "skills"}}{{> partial partial="sections/skills" }}{{/content}}
+        {{>partial partial="markdown" markdown=markdown.skills class="skills"}}
 
-        {{> partial partial="spacer" height=10 }}
+        {{> partial partial="spacer" height=7 }}
 
         {{> partial partial="heading" class="interests" name="interests" icon="heart" }}
 
-        {{#content "interests"}}{{> partial partial="sections/interests" }}{{/content}}
+        {{>partial partial="markdown" markdown=markdown.interests class="interests"}}
 
-        {{> partial partial="spacer" height=17 }}
+        {{> partial partial="spacer" height=5 }}
 
         {{> partial partial="heading" class="experience" name="experience" icon="briefcase" }}
 

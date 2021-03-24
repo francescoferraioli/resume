@@ -1,8 +1,0 @@
-{{#each skillCategories}}
-<p>{{ uppercase this.heading }}</p>
-{{>partial partial="list-of-lists" list=this.skills}}
-{{#each this.subcategories}}
-<p>{{ this.heading }}</p>
-{{>partial partial="list-of-lists" list=this.skills}}
-{{/each}}
-{{/each}}
