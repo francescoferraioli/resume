@@ -26,6 +26,7 @@ const helpers: HelperDeclareSpec = {
       return options.fn(this);
     }
   },
+  getPercentage: (count: number) => 100 / count,
 };
 
 export default helpers;

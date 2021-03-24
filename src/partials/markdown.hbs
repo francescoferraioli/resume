@@ -9,5 +9,17 @@
         {{#case 'spacer'}}
             {{> partial partial="spacer" height=this.height }}
         {{/case}} 
+        {{#case 'column'}}
+            {{#content ../class}}
+            <div style="display:flex">
+                {{#each this.columns}}
+                    <div style="width: {{getPercentage ../this.columns.length}}%">
+                    {{{this.markdown}}}
+                    </div>
+                {{/each}}
+            </div>
+            {{/content}} 
+            {{> partial partial="spacer" height=this.height }}
+        {{/case}} 
     {{/switch}}
 {{/each}}
