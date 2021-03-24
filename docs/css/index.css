@@ -133,6 +133,10 @@ ul > li li::before {
   text-align: justify;
 }
 
+.heading.skills {
+  padding-bottom: 4mm;
+}
+
 .content.skills p {
   padding-top: 2mm;
   padding-bottom: 3mm;

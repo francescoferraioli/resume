@@ -1,7 +1,6 @@
-TECHNICAL
+<u>TECHNICAL</u>
 
 Backend
-
 md:start-block:column
 md:start-block:standard
 - .NET (Core and Framework)
@@ -20,7 +19,6 @@ md:end-block:standard
 md:end-block:column
 
 Frontend
-
 md:start-block:column
 md:start-block:standard
 - HTML
@@ -37,7 +35,6 @@ md:end-block:standard
 md:end-block:column
 
 Other
-
 md:start-block:column
 md:start-block:standard
 - GIT
@@ -50,7 +47,9 @@ md:start-block:standard
 md:end-block:standard
 md:end-block:column
 
-PERSONAL
+
+<u>PERSONAL</u>
+
 
 md:start-block:column
 md:start-block:standard
