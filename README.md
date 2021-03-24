@@ -39,6 +39,7 @@ This contains handlebars (hbs) and SCSS files as wel as a single JS file. These 
 
 The JS file is simply copied across and its sole purpose is simply to put the contents into pages at runtime.
 
+Maybe move this in the markdown subfolder and link to it here?
 hashhashhash markdown
 
 It also contains markdown (md) files which will be loaded into the `context` under the `markdown` property and displayable through the `markdown` partial.
@@ -67,7 +68,42 @@ My markdown files also support using html, and this is done through the html ren
 A line is considered to be html if it starts with the < character. As stated previously, the files are parse line by line so if you want to create a html output that spans multiple line you can do so with a html block:
 
 ```
+md:start-block:html
+<ul>
+  <li>
+    Test
+  </li>
+</ul>
+md:end-block:html
 ```
+
+Without it being a block each line would be parse individually and they wouldn't be any nesting.
+
+It's important to note that obviously each block will be created as a single content and will therefore stay together through page breaks.
+
+The md files are also new line sensitive. What I mean by that is that a blank line actually tells the renderer to render a spacer with a height of 2mm.
+
+The final and probably most complicated renderer is the column renderer. This renderer allows me to declare content that will be displayed horizontally rather than vertically through the use of flex-box.
+
+Each content within a column renderer block will be displayed horizontally instead of vertically. In most cases the column renderer is enclosing multiple internal blocks. I mainly use columns to create multiple bullet point lists that are listed horizontally:
+
+```
+md:start-block:column
+md:start-block:standard
+- List 1 Bullet 1
+- List 1 Bullet 2
+- List 1 Bullet 3
+md:end-block:standard
+md:start-block:standard
+- List 2 Bullet 1
+  - List 2 Bullet 1 Sub Bullet 1
+- List 2 Bullet 2
+md:end-block:standard
+md:end-block:column
+```
+
+A limitation to this is that a column renderer cannot be nested inside another column renderer but I don't see any major valid use case for it so I didn't spend too much time trying to fix this limitation.
+
 # Getting Started
 
 ## Seeing the result
