@@ -91,6 +91,11 @@ const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
   const currentRenderer = last(blockRendererStack);
   switch (line.instruction.instruction) {
     case "start-block": {
+      if (currentRenderer && getRendererType(currentRenderer) === "column") {
+        currentRenderer.addContent(line.line);
+        return acc;
+      }
+
       blockRendererStack.push(
         getRendererFromType(line.instruction.renderer, line.lineNumber)
       );
@@ -102,7 +107,16 @@ const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
           `Found end-block without a matching start-block. #${line.lineNumber}`
         );
       }
+
       const currentRendererType = getRendererType(currentRenderer);
+      if (
+        currentRendererType === "column" &&
+        line.instruction.renderer !== "column"
+      ) {
+        currentRenderer.addContent(line.line);
+        return acc;
+      }
+
       if (currentRendererType !== line.instruction.renderer) {
         throw new Error(
           `Found end-block for renderer '${line.instruction.renderer}' but was expecing end-block for renderer '${currentRendererType}'. #${line.lineNumber}`
