@@ -1,4 +1,4 @@
-md:start-block:component.experience
+md:start-block:component
 {
   "name": "experience-heading",
   "props": {
