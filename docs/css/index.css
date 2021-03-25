@@ -177,4 +177,8 @@ ul > li li::before {
     background: white;
     page-break-after: always;
   }
+
+  .reference .heading > .icon > i.fa {
+    margin-top: 0mm;
+  }
 }
