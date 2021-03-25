@@ -1,9 +1,21 @@
 <div class="footer">
     <div>{{> fullName }}</div>
     <div>|</div>
-    <div>{{ formatPhone contactInfo.phone }}</div>
+    <div>
+        <a
+            class="no-link"
+            href="tel:+61{{ contactInfo.phone }}">
+            {{ formatPhone contactInfo.phone }}
+        </a>
+    </div>
     <div>|</div>
-    <div>{{ contactInfo.email }}</div>
+    <div>
+        <a
+            class="no-link"
+            href="mailto:{{ contactInfo.email }}">
+            {{ contactInfo.email }}
+        </a>
+    </div>
     <div>|</div>
     <div class="page-num"></div>
 </div>
