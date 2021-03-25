@@ -1,4 +1,4 @@
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - Coding
 - Technology
@@ -11,4 +11,4 @@ md:start-block:standard
 - Sport
 - Soccer
 md:end-block:standard
-md:end-block:column
+md:end-block:columns

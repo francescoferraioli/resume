@@ -59,12 +59,12 @@ It's important to note that obviously each block will be created as a single con
 
 The md files are also new line sensitive. What I mean by that is that a blank line actually tells the renderer to render a spacer with a height of 2mm.
 
-The final and probably most complicated renderer is the column renderer. This renderer allows me to declare content that will be displayed horizontally rather than vertically through the use of flex-box.
+The final and probably most complicated renderer is the columns renderer. This renderer allows me to declare content that will be displayed horizontally rather than vertically through the use of flex-box.
 
-Each content within a column renderer block will be displayed horizontally instead of vertically. In most cases the column renderer is enclosing multiple internal blocks. I mainly use columns to create multiple bullet point lists that are listed horizontally:
+Each content within a columns renderer block will be displayed horizontally instead of vertically. In most cases the columns renderer is enclosing multiple internal blocks. I mainly use columns to create multiple bullet point lists that are listed horizontally:
 
 ```
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - List 1 Bullet 1
 - List 1 Bullet 2
@@ -75,7 +75,7 @@ md:start-block:standard
   - List 2 Bullet 1 Sub Bullet 1
 - List 2 Bullet 2
 md:end-block:standard
-md:end-block:column
+md:end-block:columns
 ```
 
-A limitation to this is that a column renderer cannot be nested inside another column renderer but I don't see any major valid use case for it so I didn't spend too much time trying to fix this limitation.
+A limitation to this is that a columns renderer cannot be nested inside another column renderer but I don't see any major valid use case for it so I didn't spend too much time trying to fix this limitation.

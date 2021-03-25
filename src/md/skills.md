@@ -1,7 +1,7 @@
 <u>TECHNICAL</u>
 
 Backend
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - .NET Core
 - C# / F#
@@ -16,10 +16,10 @@ md:start-block:standard
 - Azure
 - AWS
 md:end-block:standard
-md:end-block:column
+md:end-block:columns
 
 Frontend
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - HTML
 - CSS
@@ -32,10 +32,10 @@ md:start-block:standard
 - Angular
 - LESS / SASS
 md:end-block:standard
-md:end-block:column
+md:end-block:columns
 
 Other
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - GIT
 md:end-block:standard
@@ -45,13 +45,13 @@ md:end-block:standard
 md:start-block:standard
 - VIM
 md:end-block:standard
-md:end-block:column
+md:end-block:columns
 
 
 <u>PERSONAL</u>
 
 
-md:start-block:column
+md:start-block:columns
 md:start-block:standard
 - Communication
 - Fast Learner
@@ -65,4 +65,4 @@ md:start-block:standard
 - Team Work
 - Transparent
 md:end-block:standard
-md:end-block:column
+md:end-block:columns

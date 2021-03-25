@@ -14,7 +14,7 @@
                 {{> partial partial=(componentPartial this.name) props=this.props }}
             {{/content}}
         {{/case}} 
-        {{#case 'column'}}
+        {{#case 'columns'}}
             {{#content (falseyCoalesce this.className ../class) ../skipContentClass}}
                 <div style="display:flex">
                     {{#each this.columns}}

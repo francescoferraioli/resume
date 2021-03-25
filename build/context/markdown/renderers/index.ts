@@ -3,9 +3,9 @@ import { assertUnreachable } from "../../../utils";
 import { MarkDownInstruction } from "../instructions";
 import { MarkDownLine } from "../parsers";
 import {
-  MarkDownColumn,
-  MarkDownColumnRenderer,
-} from "./MarkDownColumnRenderer";
+  MarkDownColumns,
+  MarkDownColumnsRenderer,
+} from "./MarkDownColumnsRenderer";
 import {
   MarkDownComponent,
   MarkDownComponentRenderer,
@@ -25,7 +25,7 @@ export type MarkDownRendered = (
   | MarkDownStandard
   | MarkDownHtml
   | MarkDownSpacer
-  | MarkDownColumn
+  | MarkDownColumns
   | MarkDownComponent
 ) & { className: string | undefined };
 
@@ -33,7 +33,7 @@ const renderers = [
   MarkDownStandardRenderer,
   MarkDownHtmlRenderer,
   MarkDownSpacerRenderer,
-  MarkDownColumnRenderer,
+  MarkDownColumnsRenderer,
   MarkDownComponentRenderer,
 ];
 
@@ -98,7 +98,10 @@ const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
   const currentRenderer = last(blockRendererStack);
   switch (line.instruction.instruction) {
     case "start-block": {
-      if (currentRenderer && getRendererType(currentRenderer) === "column") {
+      if (
+        currentRenderer &&
+        getRendererType(currentRenderer) === MarkDownColumnsRenderer.type
+      ) {
         currentRenderer.addContent(line.line);
         return acc;
       }
@@ -120,8 +123,8 @@ const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
 
       const currentRendererType = getRendererType(currentRenderer);
       if (
-        currentRendererType === "column" &&
-        line.instruction.renderer !== "column"
+        currentRendererType === MarkDownColumnsRenderer.type &&
+        line.instruction.renderer !== MarkDownColumnsRenderer.type
       ) {
         currentRenderer.addContent(line.line);
         return acc;
