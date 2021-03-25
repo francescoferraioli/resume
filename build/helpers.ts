@@ -10,7 +10,8 @@ const helpers: HelperDeclareSpec = {
     return `0${first} ${second} ${third}`;
   },
   partitionInGroups,
-  content: function (className, options) {
+  content: function (arg1, arg2) {
+    const { className, options } = contentParseArguments(arg1, arg2);
     const classes = ["content"].concat(className ?? []);
     return new Handlebars.SafeString(
       `<div class="${classes.join(" ")}">
@@ -32,3 +33,21 @@ const helpers: HelperDeclareSpec = {
 };
 
 export default helpers;
+
+type ContentArguments = {
+  className?: string;
+  options: Handlebars.HelperOptions;
+};
+
+const contentParseArguments = (arg1: any, arg2: any): ContentArguments => {
+  if (arg2) {
+    return {
+      className: arg1,
+      options: arg2,
+    };
+  }
+
+  return {
+    options: arg1,
+  };
+};
