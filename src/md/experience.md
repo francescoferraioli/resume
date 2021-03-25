@@ -1,5 +1,16 @@
 md:start-block:component
 {
+  "name": "heading",
+  "props": {
+    "name": "Experience",
+    "icon": "briefcase",
+    "class": "experience"
+  },
+  "skipContentClass": true
+}
+md:end-block:component
+md:start-block:component
+{
   "name": "experience-heading",
   "props": {
     "jobTitle": "Senior Software Engineer",
