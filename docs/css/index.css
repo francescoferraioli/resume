@@ -135,6 +135,10 @@ ul > li li::before {
   margin-top: 0.5mm;
 }
 
+.reference .heading > .icon > i.fa {
+  margin-top: 0.6mm;
+}
+
 .content {
   padding-left: 20mm;
   padding-right: 20mm;

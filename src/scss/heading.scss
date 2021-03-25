@@ -39,3 +39,11 @@
         }
     } 
 }
+
+.reference {
+    .heading {
+        > .icon > i.fa {
+            margin-top: 0.6mm;
+        }
+    } 
+}

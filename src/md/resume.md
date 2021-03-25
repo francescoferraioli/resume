@@ -396,3 +396,17 @@ md:end-block:component
 - OP 4
 - Dux of Information Processing Technologies (IPT)
 - Dux of Mathematics B
+
+md:start-block:component.reference
+{
+  "name": "heading",
+  "props": {
+    "name": "Reference",
+    "icon": "ellipsis-h"
+  },
+  "skipContentClass": true
+}
+md:end-block:component
+
+Excellent referees available on request
+
