@@ -11,8 +11,9 @@ const helpers: HelperDeclareSpec = {
   },
   partitionInGroups,
   content: function (className, options) {
+    const classes = ["content"].concat(className ?? []);
     return new Handlebars.SafeString(
-      `<div class="content ${className}">
+      `<div class="${classes.join(" ")}">
         ${options.fn(this)}
       </div>`
     );
