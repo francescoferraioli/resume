@@ -21,8 +21,8 @@ const helpers: HelperDeclareSpec = {
       skipContentWrapper
         ? inner
         : `<div class="${classes.join(" ")}">
-        ${inner}
-      </div>`;
+             ${inner}
+           </div>`;
     return new Handlebars.SafeString(buildHtml(options.fn(this)));
   },
   switch: function (value, options) {
