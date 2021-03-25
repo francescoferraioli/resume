@@ -1,20 +1,20 @@
 {{#each markdown}}
     {{#switch this.type}} 
         {{#case 'standard'}}
-            {{#content ../class ../skipContentWrapper}}{{{this.markdown}}}{{/content}}
+            {{#content ../class ../skipContentClass}}{{{this.markdown}}}{{/content}}
         {{/case}} 
         {{#case 'html'}}
-            {{#content ../class ../skipContentWrapper}}{{{this.html}}}{{/content}}
+            {{#content ../class ../skipContentClass}}{{{this.html}}}{{/content}}
         {{/case}} 
         {{#case 'spacer'}}
             {{> partial partial="spacer" height=this.height }}
         {{/case}} 
         {{#case 'column'}}
-            {{#content ../class ../skipContentWrapper}}
+            {{#content ../class ../skipContentClass}}
                 <div style="display:flex">
                     {{#each this.columns}}
                         <div style="width: {{getPercentage ../this.columns.length}}%">
-                            {{> partial partial="markdown" markdown=(toArray this) skipContentWrapper=true }}
+                            {{> partial partial="markdown" markdown=(toArray this) skipContentClass=true }}
                         </div>
                     {{/each}}
                 </div>

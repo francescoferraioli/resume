@@ -11,13 +11,13 @@ const helpers: HelperDeclareSpec = {
   },
   partitionInGroups,
   content: function (arg1, arg2, arg3) {
-    const { className, options, skipContentWrapper } = contentParseArguments(
+    const { className, options, skipContentClass } = contentParseArguments(
       arg1,
       arg2,
       arg3
     );
     const classes = []
-      .concat(skipContentWrapper ? [] : "content")
+      .concat(skipContentClass ? [] : "content")
       .concat(className ?? []);
     return new Handlebars.SafeString(
       `<div class="${classes.join(" ")}">
@@ -42,7 +42,7 @@ export default helpers;
 
 type ContentArguments = {
   className?: string;
-  skipContentWrapper?: boolean;
+  skipContentClass?: boolean;
   options: Handlebars.HelperOptions;
 };
 
@@ -54,7 +54,7 @@ const contentParseArguments = (
   if (arg3) {
     return {
       className: arg1,
-      skipContentWrapper: arg2,
+      skipContentClass: arg2,
       options: arg3,
     };
   }
