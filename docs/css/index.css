@@ -127,22 +127,12 @@ ul > li li::before {
   font-size: 3mm;
 }
 
-.experience .heading {
-  padding-bottom: 3mm;
-}
 .experience .heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
 
-.interests .heading {
-  padding-bottom: 5mm;
-}
 .interests .heading > .icon > i.fa {
   margin-top: 0.5mm;
-}
-
-.skills .heading {
-  padding-bottom: 4mm;
 }
 
 .content {

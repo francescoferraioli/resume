@@ -8,6 +8,10 @@ md:start-block:component.skills
   "skipContentClass": true
 }
 md:end-block:component
+
+
+
+
 <u>TECHNICAL</u>
 
 Backend
