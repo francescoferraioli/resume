@@ -53,7 +53,9 @@ function moveContentsIntoPages(contents) {
 
         accumulativeHeight += contentHeight;
 
-        if(accumulativeHeight + footerHeight + (pageNumber > 1 ? pageTopMargin : 0) > pageHeight) {
+        const overflow = accumulativeHeight + footerHeight + (pageNumber > 1 ? pageTopMargin : 0) > pageHeight
+
+        if(overflow) {
             accumulativeHeight = contentHeight;
             pageNumber++;
             page = createPage(pageNumber)
