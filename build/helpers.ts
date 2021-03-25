@@ -5,6 +5,7 @@ import { partitionInGroups } from "./utils";
 const helpers: HelperDeclareSpec = {
   uppercase: (x: string) => x.toUpperCase(),
   sectionPartial: (x: string) => `sections/${x}`,
+  componentPartial: (x: string) => `components/${x}`,
   formatPhone: (x: string) => {
     const [, first, second, third] = x.match(/^(\d{3})(\d{3})(\d{3})$/);
     return `0${first} ${second} ${third}`;

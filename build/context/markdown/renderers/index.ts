@@ -6,6 +6,10 @@ import {
   MarkDownColumn,
   MarkDownColumnRenderer,
 } from "./MarkDownColumnRenderer";
+import {
+  MarkDownComponent,
+  MarkDownComponentRenderer,
+} from "./MarkDownComponentRenderer";
 import { MarkDownHtml, MarkDownHtmlRenderer } from "./MarkDownHtmlRenderer";
 import { MarkDownRenderer } from "./MarkDownRenderer";
 import {
@@ -22,6 +26,7 @@ export type MarkDownRendered = (
   | MarkDownHtml
   | MarkDownSpacer
   | MarkDownColumn
+  | MarkDownComponent
 ) & { className: string | undefined };
 
 const renderers = [
@@ -29,6 +34,7 @@ const renderers = [
   MarkDownHtmlRenderer,
   MarkDownSpacerRenderer,
   MarkDownColumnRenderer,
+  MarkDownComponentRenderer,
 ];
 
 export const getRendererType = (renderer: MarkDownRenderer) =>

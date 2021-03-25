@@ -9,6 +9,11 @@
         {{#case 'spacer'}}
             {{> partial partial="spacer" height=this.height }}
         {{/case}} 
+        {{#case 'component'}}
+            {{#content (falseyCoalesce this.className ../class) (falseyCoalesce this.skipContentClass ../skipContentClass)}}
+                {{> partial partial=(componentPartial this.name) props=this.props }}
+            {{/content}}
+        {{/case}} 
         {{#case 'column'}}
             {{#content (falseyCoalesce this.className ../class) ../skipContentClass}}
                 <div style="display:flex">
