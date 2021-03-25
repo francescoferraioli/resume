@@ -1,16 +1,13 @@
 import * as Handlebars from "handlebars";
 import { HelperDeclareSpec } from "handlebars";
-import { partitionInGroups } from "./utils";
 
 const helpers: HelperDeclareSpec = {
   uppercase: (x: string) => x.toUpperCase(),
-  sectionPartial: (x: string) => `sections/${x}`,
   componentPartial: (x: string) => `components/${x}`,
   formatPhone: (x: string) => {
     const [, first, second, third] = x.match(/^(\d{3})(\d{3})(\d{3})$/);
     return `0${first} ${second} ${third}`;
   },
-  partitionInGroups,
   content: function (arg1, arg2, arg3) {
     const { className, options, skipContentClass } = contentParseArguments(
       arg1,

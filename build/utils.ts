@@ -1,10 +1,4 @@
 import { exec } from "child_process";
-import { chain, range } from "lodash";
-
-export const partitionInGroups = <T>(items: T[], num: number): T[][] =>
-  chain(items)
-    .chunk(Math.ceil(items.length / num))
-    .value();
 
 export const run = (command: string) => {
   exec(command, (error, stdout, stderr) => {
