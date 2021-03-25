@@ -1,3 +1,15 @@
+md:start-block:component.experience
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Senior Software Engineer",
+    "company": "Stacktrace",
+    "start": "AUGUST 2018",
+    "end": "JANUARY 2021"
+  }
+}
+md:end-block:component
+
 Stacktrace is an end-to-end technology consultancy company. In my time at Stacktrace I have worked as as full stack senior software engineer on different projects, each with different stacks:
 
 <u>Emerging Healthcare</u>
