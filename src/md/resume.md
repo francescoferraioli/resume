@@ -397,6 +397,10 @@ md:end-block:component
 - Dux of Information Processing Technologies (IPT)
 - Dux of Mathematics B
 
+
+
+
+
 md:start-block:component.reference
 {
   "name": "heading",
