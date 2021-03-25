@@ -181,16 +181,16 @@ md:start-block:standard
 - Terraform
 md:end-block:standard
 md:start-block:standard
+- ClickSend
+- Docker
+- BuildKite
+md:end-block:standard
+md:start-block:standard
 - AWS
   - S3
   - CloudFront
   - SES
   - SNS/SQS
-md:end-block:standard
-md:start-block:standard
-- ClickSend
-- Docker
-- BuildKite
 md:end-block:standard
 md:end-block:columns
 
