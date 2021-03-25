@@ -15,6 +15,7 @@ export class MarkDownHtmlRenderer extends MarkDownRenderer {
 
   render(): MarkDownRendered {
     return {
+      className: this.className,
       type: MarkDownHtmlRenderer.type,
       html: this.content,
     };

@@ -16,6 +16,7 @@ export class MarkDownColumnRenderer extends MarkDownRenderer {
 
   render(): MarkDownRendered {
     return {
+      className: this.className,
       type: MarkDownColumnRenderer.type,
       columns: parseMarkdownLines(this.contents),
     };

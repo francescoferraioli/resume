@@ -15,6 +15,7 @@ export class MarkDownSpacerRenderer extends MarkDownRenderer {
 
   render(): MarkDownRendered {
     return {
+      className: this.className,
       type: MarkDownSpacerRenderer.type,
       height: 2,
     };

@@ -17,11 +17,12 @@ import {
   MarkDownStandardRenderer,
 } from "./MarkDownStandardRenderer";
 
-export type MarkDownRendered =
+export type MarkDownRendered = (
   | MarkDownStandard
   | MarkDownHtml
   | MarkDownSpacer
-  | MarkDownColumn;
+  | MarkDownColumn
+) & { className: string | undefined };
 
 const renderers = [
   MarkDownStandardRenderer,
@@ -96,9 +97,12 @@ const renderInstruction = (blockRendererStack: MarkDownRenderer[]) => (
         return acc;
       }
 
-      blockRendererStack.push(
-        getRendererFromType(line.instruction.renderer, line.lineNumber)
+      const newRenderer = getRendererFromType(
+        line.instruction.renderer,
+        line.lineNumber
       );
+      newRenderer.setClassName(line.instruction.className);
+      blockRendererStack.push(newRenderer);
       return acc;
     }
     case "end-block": {

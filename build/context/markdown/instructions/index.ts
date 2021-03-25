@@ -1,10 +1,5 @@
-const instructions: Record<
-  string,
-  MarkDownInstruction["instruction"]["instruction"]
-> = {
-  startBlock: "start-block",
-  endBlock: "end-block",
-};
+const startBlock = "start-block";
+const endBlock = "end-block";
 
 export const isInstruction = (line: string): boolean => line.startsWith("md:");
 
@@ -27,10 +22,16 @@ const getInstructionType = (
   lineNumber: number
 ): MarkDownInstruction["instruction"] => {
   switch (type) {
-    case instructions.startBlock:
-    case instructions.endBlock:
+    case startBlock:
+      const [renderer, className] = rest.split(".");
       return {
-        instruction: type,
+        instruction: startBlock,
+        renderer,
+        className,
+      };
+    case endBlock:
+      return {
+        instruction: endBlock,
         renderer: rest,
       };
     default:
@@ -48,6 +49,7 @@ export type MarkDownInstruction = {
 interface MarkDownStartBlock {
   instruction: "start-block";
   renderer: string;
+  className: string | undefined;
 }
 
 interface MarkDownEndBlock {

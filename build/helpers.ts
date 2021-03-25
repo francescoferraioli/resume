@@ -36,6 +36,7 @@ const helpers: HelperDeclareSpec = {
   },
   getPercentage: (count: number) => 100 / count,
   toArray: (x: any) => [x],
+  falseyCoalesce: (a: any, b: any) => a || b,
 };
 
 export default helpers;

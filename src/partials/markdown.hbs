@@ -1,16 +1,16 @@
 {{#each markdown}}
     {{#switch this.type}} 
         {{#case 'standard'}}
-            {{#content ../class ../skipContentClass}}{{{this.markdown}}}{{/content}}
+            {{#content (falseyCoalesce this.className ../class) ../skipContentClass}}{{{this.markdown}}}{{/content}}
         {{/case}} 
         {{#case 'html'}}
-            {{#content ../class ../skipContentClass}}{{{this.html}}}{{/content}}
+            {{#content (falseyCoalesce this.className ../class) ../skipContentClass}}{{{this.html}}}{{/content}}
         {{/case}} 
         {{#case 'spacer'}}
             {{> partial partial="spacer" height=this.height }}
         {{/case}} 
         {{#case 'column'}}
-            {{#content ../class ../skipContentClass}}
+            {{#content (falseyCoalesce this.className ../class) ../skipContentClass}}
                 <div style="display:flex">
                     {{#each this.columns}}
                         <div style="width: {{getPercentage ../this.columns.length}}%">

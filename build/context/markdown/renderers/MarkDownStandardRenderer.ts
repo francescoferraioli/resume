@@ -5,6 +5,7 @@ import { MarkDownRendered } from ".";
 export interface MarkDownStandard {
   type: "standard";
   markdown: string;
+  className?: string;
 }
 
 export class MarkDownStandardRenderer extends MarkDownRenderer {
@@ -16,6 +17,7 @@ export class MarkDownStandardRenderer extends MarkDownRenderer {
 
   render(): MarkDownRendered {
     return {
+      className: this.className,
       type: MarkDownStandardRenderer.type,
       markdown: new md().render(this.content).trimEnd(),
     };
