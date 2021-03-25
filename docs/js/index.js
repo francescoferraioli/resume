@@ -62,7 +62,6 @@ function moveContentsIntoPages(contents) {
             content.detach()
             i--;
         }
-
     }
 }
 
