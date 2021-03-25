@@ -16,14 +16,14 @@ const helpers: HelperDeclareSpec = {
       arg2,
       arg3
     );
-    const classes = ["content"].concat(className ?? []);
-    const buildHtml = (inner: string) =>
-      skipContentWrapper
-        ? inner
-        : `<div class="${classes.join(" ")}">
-             ${inner}
-           </div>`;
-    return new Handlebars.SafeString(buildHtml(options.fn(this)));
+    const classes = []
+      .concat(skipContentWrapper ? [] : "content")
+      .concat(className ?? []);
+    return new Handlebars.SafeString(
+      `<div class="${classes.join(" ")}">
+             ${options.fn(this)}
+           </div>`
+    );
   },
   switch: function (value, options) {
     this.switch_value = value;
