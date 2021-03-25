@@ -39,7 +39,7 @@ This contains handlebars (hbs) and SCSS files as wel as a single JS file. These 
 
 The JS file is simply copied across and its sole purpose is simply to put the contents into pages at runtime.
 
-It also contains markdown (md) files which will be loaded into the `context` under the `markdown` property and displayable through the `markdown` partial.
+It also contains markdown (md) files which will be loaded into the `context` under the `markdown` property and displayable through the `markdown` partial. To learn more about the usage of markdown please see the [README](src/md/README.md)
 
 # Getting Started
 
