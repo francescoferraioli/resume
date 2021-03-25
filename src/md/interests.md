@@ -1,3 +1,14 @@
+md:start-block:component
+{
+  "name": "heading",
+  "props": {
+    "name": "Interests",
+    "icon": "heart",
+    "class": "interests"
+  },
+  "skipContentClass": true
+}
+md:end-block:component
 md:start-block:columns
 md:start-block:standard
 - Coding

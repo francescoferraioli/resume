@@ -1,3 +1,14 @@
+md:start-block:component
+{
+  "name": "heading",
+  "props": {
+    "name": "Skills",
+    "icon": "wrench",
+    "class": "skills"
+  },
+  "skipContentClass": true
+}
+md:end-block:component
 <u>TECHNICAL</u>
 
 Backend
