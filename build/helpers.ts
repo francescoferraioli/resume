@@ -10,14 +10,20 @@ const helpers: HelperDeclareSpec = {
     return `0${first} ${second} ${third}`;
   },
   partitionInGroups,
-  content: function (arg1, arg2) {
-    const { className, options } = contentParseArguments(arg1, arg2);
-    const classes = ["content"].concat(className ?? []);
-    return new Handlebars.SafeString(
-      `<div class="${classes.join(" ")}">
-        ${options.fn(this)}
-      </div>`
+  content: function (arg1, arg2, arg3) {
+    const { className, options, skipContentWrapper } = contentParseArguments(
+      arg1,
+      arg2,
+      arg3
     );
+    const classes = ["content"].concat(className ?? []);
+    const buildHtml = (inner: string) =>
+      skipContentWrapper
+        ? inner
+        : `<div class="${classes.join(" ")}">
+        ${inner}
+      </div>`;
+    return new Handlebars.SafeString(buildHtml(options.fn(this)));
   },
   switch: function (value, options) {
     this.switch_value = value;
@@ -36,10 +42,23 @@ export default helpers;
 
 type ContentArguments = {
   className?: string;
+  skipContentWrapper?: boolean;
   options: Handlebars.HelperOptions;
 };
 
-const contentParseArguments = (arg1: any, arg2: any): ContentArguments => {
+const contentParseArguments = (
+  arg1: any,
+  arg2: any,
+  arg3
+): ContentArguments => {
+  if (arg3) {
+    return {
+      className: arg1,
+      skipContentWrapper: arg2,
+      options: arg3,
+    };
+  }
+
   if (arg2) {
     return {
       className: arg1,
