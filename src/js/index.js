@@ -1,3 +1,5 @@
+const pageBreak = "-----PAGE-BREAK-----"
+
 const pxPerMM = 3.78
 
 const pageHeight = 297
@@ -48,6 +50,15 @@ function moveContentsIntoPages(contents) {
 
     for(var i = 0;i < contents.length;i++){
         const content = $(contents[i]);
+        const isPageBreak = content.text().trim() === pageBreak;
+
+        if(isPageBreak) {
+            pageNumber++;
+            page = createPage(pageNumber)
+            accumulativeHeight = 0;
+            continue;
+        }
+
         content.appendTo(page)
         const contentHeight = getHeightInMM(content)
 
