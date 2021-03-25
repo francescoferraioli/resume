@@ -3,6 +3,8 @@
         display: flex;
         padding: 1mm 0;
 
+        font-size: 4.5mm;
+
         &:first-child {
             > div {
                 &:not(:last-child) {

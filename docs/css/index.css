@@ -159,6 +159,7 @@ ul > li li::before {
 .experience-heading > div {
   display: flex;
   padding: 1mm 0;
+  font-size: 4.5mm;
 }
 .experience-heading > div:first-child > div:not(:last-child) {
   color: #238cb6;
