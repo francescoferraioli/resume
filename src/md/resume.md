@@ -339,3 +339,60 @@ md:end-block:standard
 - Use GIT for version control
 - Use JIRA for issue tracking
 
+
+
+
+
+
+
+md:start-block:component.education
+{
+  "name": "heading",
+  "props": {
+    "name": "Education",
+    "icon": "graduation-cap"
+  },
+  "skipContentClass": true
+}
+md:end-block:component
+
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Software Engineering (First Class Honours)",
+    "company": "QUT",
+    "start": "2011",
+    "end": "2014"
+  }
+}
+md:end-block:component
+
+- GPA of 6.594
+md:start-block:standard
+- Dean’s List of High Academic Achievers:
+  - 2011 Semester 1 & 2
+  - 2012 Semester 1 & 2
+  - 2013 Semester 1 & 2
+  - 2014 Semester 1
+md:end-block:standard
+
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Secondary Education",
+    "company": "Mt Maria",
+    "start": "2006",
+    "end": "2010"
+  }
+}
+md:end-block:component
+
+- OP 4
+- Dux of Information Processing Technologies (IPT)
+- Dux of Mathematics B
