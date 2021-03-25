@@ -23,7 +23,7 @@ To be display in the resume with:
 In order to fully support all the different html structures I need rendered on the page I had to extend the markdown language a bit.
 
 Each line in the markdown file is parse seperately in order to create seperate elements to enable page breaks to occur automatically. However, in some cases markdown is context aware and parsing it line by line will produce different results than parsing the lines as a markdown block. As a result I introduce syntax for defining blocks:
-A block is started with a line `md:start-block:${renderer}` and is ended with a line `md:end-block:${renderer}`. I will explain what I mean by renderer soon but for now if we want to create a markdown block we use the `standard` renderer.
+A block is started with a line `md:start-block:${renderer}(.${class})?` and is ended with a line `md:end-block:${renderer}`. I will explain what I mean by renderer soon but for now if we want to create a markdown block we use the `standard` renderer. You can specify and optional css class to be assigned to the block.
 
 ```
 md:start-block:standard
