@@ -45,6 +45,7 @@ ul {
 }
 ul > li {
   padding-bottom: 1mm;
+  text-align: left;
 }
 ul > li::before {
   content: "•";
