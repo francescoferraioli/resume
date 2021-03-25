@@ -127,14 +127,11 @@ ul > li li::before {
   font-size: 3mm;
 }
 
-.content {
-  padding-left: 20mm;
-  padding-right: 20mm;
-  text-align: justify;
+.experience .heading {
+  padding-bottom: 3mm;
 }
-
-.skills .heading {
-  padding-bottom: 4mm;
+.experience .heading > .icon > i.fa {
+  margin-top: 0.5mm;
 }
 
 .interests .heading {
@@ -144,11 +141,14 @@ ul > li li::before {
   margin-top: 0.5mm;
 }
 
-.experience .heading {
-  padding-bottom: 3mm;
+.skills .heading {
+  padding-bottom: 4mm;
 }
-.experience .heading > .icon > i.fa {
-  margin-top: 0.5mm;
+
+.content {
+  padding-left: 20mm;
+  padding-right: 20mm;
+  text-align: justify;
 }
 
 .experience-heading > div {
