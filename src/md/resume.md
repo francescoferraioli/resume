@@ -402,7 +402,7 @@ md:start-block:component.reference
   "name": "heading",
   "props": {
     "name": "Reference",
-    "icon": "ellipsis-h"
+    "icon": "asterisk"
   },
   "skipContentClass": true
 }
