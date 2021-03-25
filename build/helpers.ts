@@ -21,8 +21,8 @@ const helpers: HelperDeclareSpec = {
       .concat(className ?? []);
     return new Handlebars.SafeString(
       `<div class="${classes.join(" ")}">
-             ${options.fn(this)}
-           </div>`
+        ${options.fn(this)}
+      </div>`
     );
   },
   switch: function (value, options) {
