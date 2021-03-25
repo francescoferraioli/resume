@@ -1,7 +1,9 @@
-.heading.experience {
-    > .icon > i.fa {
-        margin-top: 0.5mm;
-    }
-
-    padding-bottom: 3mm;
-} 
+.experience {
+    .heading {
+        > .icon > i.fa {
+            margin-top: 0.5mm;
+        }
+    
+        padding-bottom: 3mm;
+    } 
+}

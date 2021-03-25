@@ -1,10 +1,9 @@
-md:start-block:component
+md:start-block:component.summary
 {
   "name": "heading",
   "props": {
     "name": "Summary",
-    "icon": "bars",
-    "class": "summary"
+    "icon": "bars"
   },
   "skipContentClass": true
 }

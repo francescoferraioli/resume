@@ -133,7 +133,7 @@ ul > li li::before {
   text-align: justify;
 }
 
-.heading.skills {
+.skills .heading {
   padding-bottom: 4mm;
 }
 
@@ -142,17 +142,17 @@ ul > li li::before {
   padding-bottom: 3mm;
 }
 
-.heading.interests {
+.interests .heading {
   padding-bottom: 5mm;
 }
-.heading.interests > .icon > i.fa {
+.interests .heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
 
-.heading.experience {
+.experience .heading {
   padding-bottom: 3mm;
 }
-.heading.experience > .icon > i.fa {
+.experience .heading > .icon > i.fa {
   margin-top: 0.5mm;
 }
 

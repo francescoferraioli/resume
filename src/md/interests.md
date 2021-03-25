@@ -1,10 +1,9 @@
-md:start-block:component
+md:start-block:component.interests
 {
   "name": "heading",
   "props": {
     "name": "Interests",
-    "icon": "heart",
-    "class": "interests"
+    "icon": "heart"
   },
   "skipContentClass": true
 }

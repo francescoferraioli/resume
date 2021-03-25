@@ -1,10 +1,9 @@
-md:start-block:component
+md:start-block:component.skills
 {
   "name": "heading",
   "props": {
     "name": "Skills",
-    "icon": "wrench",
-    "class": "skills"
+    "icon": "wrench"
   },
   "skipContentClass": true
 }

@@ -1,10 +1,9 @@
-md:start-block:component
+md:start-block:component.experience
 {
   "name": "heading",
   "props": {
     "name": "Experience",
-    "icon": "briefcase",
-    "class": "experience"
+    "icon": "briefcase"
   },
   "skipContentClass": true
 }
