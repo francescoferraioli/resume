@@ -1,12 +1,12 @@
-const pageBreak = "-----PAGE-BREAK-----"
+const PAGE_BREAK = "-----PAGE-BREAK-----"
 
-const pxPerMM = 3.78
+const PX_PER_MM = 3.78
 
-const pageHeight = 297
+const PAGE_HEIGHT = 297
 
-const footerMargin = 7;
+const FOOTER_MARGIN = 7;
 
-const pageTopMargin = 10;
+const PAGE_TOP_MARGIN = 10;
 
 const templates = {}
 
@@ -33,11 +33,11 @@ function getFooterHeight() {
 }
 
 function getHeightInMM(elem) {
-    return $(elem).outerHeight() / pxPerMM;
+    return $(elem).outerHeight() / PX_PER_MM;
 }
 
 function moveContentsIntoPages(contents) {
-    const footerHeight = getFooterHeight() + footerMargin * 2
+    const footerHeight = getFooterHeight() + FOOTER_MARGIN * 2
 
     let pageNumber = 1;
     let page = createPage(1)
@@ -50,7 +50,7 @@ function moveContentsIntoPages(contents) {
 
     for(var i = 0;i < contents.length;i++){
         const content = $(contents[i]);
-        const isPageBreak = content.text().trim() === pageBreak;
+        const isPageBreak = content.text().trim() === PAGE_BREAK;
 
         if(isPageBreak) {
             pageNumber++;
@@ -64,7 +64,7 @@ function moveContentsIntoPages(contents) {
 
         accumulativeHeight += contentHeight;
 
-        const overflow = accumulativeHeight + footerHeight + (pageNumber > 1 ? pageTopMargin : 0) > pageHeight
+        const overflow = accumulativeHeight + footerHeight + (pageNumber > 1 ? PAGE_TOP_MARGIN : 0) > PAGE_HEIGHT
 
         if(overflow) {
             accumulativeHeight = contentHeight;
