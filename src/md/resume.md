@@ -214,3 +214,22 @@ md:start-block:standard
   - ApiGateway
 md:end-block:standard
 md:end-block:columns
+
+<u>Blackbaud</u>
+Working on an CRM for charities. Specifically we worked on a solution for charities to organise events and create forms for people to register to those events.
+md:start-block:columns
+md:start-block:standard
+- C# .NET Core
+  - Written in a FP style with the LanguageExt library
+md:end-block:standard
+md:start-block:standard
+- Angular SPA
+  - Using NgRx for state management
+md:end-block:standard
+md:start-block:standard
+- Azure
+  - CosmosDB
+  - ServiceBus
+  - WebJob
+md:end-block:standard
+md:end-block:columns
