@@ -22,3 +22,24 @@ md:start-block:standard
 - BuildKite
 md:end-block:standard
 md:end-block:column
+
+<u>JustGiving</u>
+Working on a platform for charities and peer-to-peer fundraising. Specifically we worked on a solution for pages/campaigns to be assigned tags and to calculate aggregations of donations and fitness related activities against those pages/campaigns for totals and leaderboards.
+md:start-block:column
+md:start-block:standard
+- Serverless microservices
+- Typescript
+- React
+md:end-block:standard
+md:start-block:standard
+- Docker
+- CircleCI
+- Terraform
+md:end-block:standard
+md:start-block:standard
+- AWS
+  - DynamoDB
+  - SNS/SQS
+  - ApiGateway
+md:end-block:standard
+md:end-block:column
