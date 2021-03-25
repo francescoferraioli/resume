@@ -12,5 +12,6 @@ const buildMarkdownForFile = (
 
 export const markdown: Record<string, MarkDownRendered[]> = fs
   .readdirSync(markdownFolder)
+  .filter((name) => name !== "README.md")
   .map(buildMarkdownForFile)
   .reduce(Object.assign, {});
