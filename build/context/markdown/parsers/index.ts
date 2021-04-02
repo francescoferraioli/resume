@@ -16,7 +16,11 @@ interface MarkDownText {
 }
 
 export const parseMarkdownFile = (file: string): MarkDownRendered[] =>
-  parseMarkdownLines(fs.readFileSync(file, "utf-8").split("\n"));
+  parseMarkdownLines(
+    fs.readFileSync(file, "utf-8").split("\n").filter(isNotComment)
+  );
+
+const isNotComment = (line: string) => !line.startsWith("!#");
 
 export const parseMarkdownLines = (lines: string[]): MarkDownRendered[] => {
   const blockRendererStack: MarkDownRenderer[] = [];
