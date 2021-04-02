@@ -354,10 +354,10 @@ md:start-block:standard
   - Use JQuery to create and position the DOM elements
   - Use mathematical skills to work out size and positioning
 md:end-block:standard
+md:start-block:standard
 - Enhance User Experience (UX)
   - Restructure HTML for better UX
   - Style using CSS for better look and feel
-md:start-block:standard
 md:end-block:standard
 - Use SVN for version control
 
