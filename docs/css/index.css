@@ -58,6 +58,12 @@ ul > li li::before {
   content: "-";
 }
 
+hr {
+  border: none;
+  height: 0.3mm;
+  background-color: #238cb6;
+}
+
 .header {
   border-radius: 0.5mm;
   background-color: #eceaea;
