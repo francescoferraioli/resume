@@ -189,6 +189,8 @@ md:end-block:component
 
 For The Record (FTR) builds a web application for courts to capture, store, produce and deliver court recordings and court transcripts.
 
+
+
 md:start-block:columns
 md:start-block:standard
 - Node / Typescript
@@ -215,6 +217,8 @@ md:end-block:columns
 
 
 
+
+
 md:start-block:component
 {
   "name": "experience-heading",
@@ -229,8 +233,12 @@ md:end-block:component
 
 Stacktrace is an end-to-end technology consultancy company. In my time at Stacktrace I have worked as as full stack senior software engineer on different projects, each with different stacks:
 
+
+
 <u>Emerging Healthcare</u>
 Working on a telehealth solution on the cloud. This solution was used by GPs to undertake their consults through video as well as paediatrics to supply urgent care after hours.
+
+
 md:start-block:columns
 md:start-block:standard
 - F# .NET Core application
@@ -252,8 +260,12 @@ md:start-block:standard
 md:end-block:standard
 md:end-block:columns
 
+
+
 <u>JustGiving</u>
 Working on a platform for charities and peer-to-peer fundraising. Specifically we worked on a solution for pages/campaigns to be assigned tags and to calculate aggregations of donations and fitness related activities against those pages/campaigns for totals and leaderboards.
+
+
 md:start-block:columns
 md:start-block:standard
 - Serverless microservices
@@ -275,6 +287,8 @@ md:end-block:columns
 
 <u>Blackbaud</u>
 Working on an CRM for charities. Specifically we worked on a solution for charities to organise events and create forms for people to register to those events.
+
+
 md:start-block:columns
 md:start-block:standard
 - C# .NET Core
@@ -331,6 +345,9 @@ md:end-block:standard
 
 
 
+
+
+
 md:start-block:component
 {
   "name": "experience-heading",
@@ -344,6 +361,7 @@ md:start-block:component
 md:end-block:component
 
 SAIVT has a database full of videos that had been pre-processed to gather information the speech and the audio on those videos. They have a web application that would show these videos in a video player and would display information about who was speaking as well as have rectangles following the faces on the screen with information about the person.
+
 
 <u>Responsibilities</u>
 
@@ -360,7 +378,7 @@ md:start-block:standard
   - Style using CSS for better look and feel
 md:end-block:standard
 - Use SVN for version control
-
+-----PAGE-BREAK-----
 
 
 
@@ -461,6 +479,10 @@ md:end-block:component
 
 
 
+
+
+
+
 !#------------------------#!
 !#       REFERENCE        #!
 !#------------------------#!
@@ -475,6 +497,8 @@ md:start-block:component.reference
   "skipContentClass": true
 }
 md:end-block:component
+
+
 
 Excellent referees available on request
 
