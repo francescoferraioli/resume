@@ -59,6 +59,12 @@ function moveContentsIntoPages(contents) {
             continue;
         }
 
+        const isSpacer = $(content).is(':empty')
+
+        if(isSpacer && accumulativeHeight === 0){
+            continue;
+        }
+
         content.appendTo(page)
         const contentHeight = getHeightInMM(content)
 
