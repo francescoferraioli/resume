@@ -1,3 +1,6 @@
+!#------------------------#!
+!#         SUMMARY        #!
+!#------------------------#!
 md:start-block:component.summary
 {
   "name": "heading",
@@ -21,6 +24,9 @@ I also believe that working in a team of people with the same passion is paramou
 
 
 
+!#------------------------#!
+!#         SKILLS         #!
+!#------------------------#!
 
 md:start-block:component.skills
 {
@@ -113,6 +119,9 @@ md:end-block:columns
 
 
 
+!#------------------------#!
+!#       INTERESTS        #!
+!#------------------------#!
 
 md:start-block:component.interests
 {
@@ -144,6 +153,9 @@ md:start-block:standard
 md:end-block:standard
 md:end-block:columns
 -----PAGE-BREAK-----
+!#------------------------#!
+!#      EXPERIENCE        #!
+!#------------------------#!
 md:start-block:component.experience
 {
   "name": "heading",
@@ -344,6 +356,9 @@ md:end-block:standard
 
 
 
+!#------------------------#!
+!#       EDUCATION        #!
+!#------------------------#!
 
 md:start-block:component.education
 {
@@ -400,6 +415,9 @@ md:end-block:component
 
 
 
+!#------------------------#!
+!#       REFERENCE        #!
+!#------------------------#!
 
 md:start-block:component.reference
 {
