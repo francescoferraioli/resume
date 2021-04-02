@@ -179,6 +179,46 @@ md:start-block:component
 {
   "name": "experience-heading",
   "props": {
+    "jobTitle": "Full Stack Developer",
+    "company": "For The Record",
+    "start": "JANUARY 2021",
+    "end": "CURRENT"
+  }
+}
+md:end-block:component
+
+For The Record (FTR) builds a web application for courts to capture, store, produce and deliver court recordings and court transcripts.
+
+md:start-block:columns
+md:start-block:standard
+- Node / Typescript
+- Angular / Typescipt
+- PostgresDB
+- Cloud Formation
+- Terraform
+md:end-block:standard
+md:start-block:standard
+- Speech-to-Text
+  - AWS Transcribe
+  - Azure CSS
+  - IBM Watson
+  - Google Cloud STT
+md:end-block:standard
+md:start-block:standard
+- AWS
+  - S3
+  - ECS
+  - Cognito
+  - SNS/SQS
+md:end-block:standard
+md:end-block:columns
+
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
     "jobTitle": "Senior Software Engineer",
     "company": "Stacktrace",
     "start": "AUGUST 2018",
