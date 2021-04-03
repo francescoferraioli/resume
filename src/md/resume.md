@@ -320,28 +320,32 @@ md:end-block:component
 
 SAP SuccessFactors offers a cloud-based human resource software and fully integrated human capital management (HCM) system. As part of this, they offer Reporting and Analytics on their HR data.
 
-<u>Responsibilities</u>
 
 
 
+md:start-block:columns
 md:start-block:standard
-- Implement features to allow customers to better undertake Reporting and Analytics
-  -  Using .NET on the server side and libraries such as Aspose for output
-  - Using JavaScript (Dojo) for front end and libraries such a Highcharts for charting
-  - Building REST and OData API
-    - WebAPI
-    - APIGEE
-  - Implement Single Sign On
-    - SAML 2.0
-    - OAuth
+- .NET Framework
+  - Aspose
+- JavaScript
+  - Dojo
+  - Highcharts
+md:end-block:standard
+md:start-block:standard
+- REST and OData API
+  - WebAPI
+  - APIGEE
+- Single Sign On
+  - SAML 2.0
+  - OAuth
 md:end-block:standard
 md:start-block:standard
 - Write Unit Tests
   - NUnit
-md:end-block:standard
 - Use GIT for version control
 - Use JIRA for issue tracking
-
+md:end-block:standard
+md:end-block:columns
 
 
 
@@ -363,10 +367,6 @@ md:end-block:component
 SAIVT has a database full of videos that had been pre-processed to gather information the speech and the audio on those videos. They have a web application that would show these videos in a video player and would display information about who was speaking as well as have rectangles following the faces on the screen with information about the person.
 
 
-<u>Responsibilities</u>
-
-
-
 md:start-block:standard
 - Turn the embedded face recognition rectangles into interactive DOM elements
   - Use JQuery to create and position the DOM elements
@@ -378,7 +378,6 @@ md:start-block:standard
   - Style using CSS for better look and feel
 md:end-block:standard
 - Use SVN for version control
------PAGE-BREAK-----
 
 
 
@@ -396,9 +395,6 @@ md:end-block:component
 
 MonicIT offered a SAAS which they called the “Limousine Management System” (LMS). The system allows limousine companies to run their business on the SAAS provided.
 
-<u>Responsibilities</u>
-
-
 
 md:start-block:standard
 - Implement features for LMS
@@ -414,6 +410,7 @@ md:start-block:standard
 md:end-block:standard
 - Use GIT for version control
 - Use JIRA for issue tracking
+-----PAGE-BREAK-----
 
 
 
