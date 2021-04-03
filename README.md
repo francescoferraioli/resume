@@ -1,6 +1,12 @@
 Live at [francescoferraioli.github.io/resume](https://francescoferraioli.github.io/resume)
 
-I started this repository because I was sick of depending on Microsoft Word for updating my resume. I can now simply update this code.
+I started this repository because I was sick of depending on Microsoft Word for updating my resume. Everytime I needed to update my resume it was always a massive hassle and I wanted a better workflow.
+
+I thought what if I can just simply update code?
+
+I started off with a simple html page and some css and then I slowly introduced libraries like handlebars to help with the templating and scss to make it more sassy ;)
+
+Now, it has basically become a function that takes markdown (with some extra features) and outputs my resume.
 
 # Contents
 
