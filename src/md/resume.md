@@ -82,7 +82,7 @@ md:start-block:standard
 - GIT
 md:end-block:standard
 md:start-block:standard
-- Strong Command Line
+- Command Line
 md:end-block:standard
 md:start-block:standard
 - VIM
