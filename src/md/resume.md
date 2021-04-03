@@ -49,16 +49,14 @@ md:start-block:columns
 md:start-block:standard
 - .NET Core
 - C# / F#
-- NUnit / XUnit
 md:end-block:standard
 md:start-block:standard
-- JAVA
-- JUnit
-- OData
+- Node / TypeScript
+- Terraform
 md:end-block:standard
 md:start-block:standard
-- Azure
 - AWS
+- Azure
 md:end-block:standard
 md:end-block:columns
 
@@ -66,15 +64,15 @@ Frontend
 md:start-block:columns
 md:start-block:standard
 - HTML
-- CSS
+- CSS / SCSS
 md:end-block:standard
 md:start-block:standard
-- JavaScript
 - TypeScript
+- JavaScript
 md:end-block:standard
 md:start-block:standard
+- React
 - Angular
-- LESS / SASS
 md:end-block:standard
 md:end-block:columns
 
