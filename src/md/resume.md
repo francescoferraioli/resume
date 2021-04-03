@@ -11,10 +11,10 @@ md:start-block:component.summary
   "skipContentClass": true
 }
 md:end-block:component
-I am an extremely passionate full stack engineer favoring .NET (C# / F#) on the backend and React/Angular on the front end whilst having a broad experience in many other technologies.
-I am in love with using functional programming patterns to create intelligent, fast, secure, maintainable, readable, testable and reliable systems.
-I am a strong believer in being in a continuous state of learning as technology continues to rapidly evolve.
-I also believe that working in a team of people with the same passion is paramount.
+I am an extremely passionate Full Stack Senior Software Engineer with a special love for Functional Programming. On the backend I favour .NET (C# / F#) or Node (with Typescript) whilst in the front end my true love is React but I also have a lot of experience with Angular.
+I am in love with using functional programming patterns to create intelligent, fast, secure, maintainable, readable, testable and reliable systems. Separating the purity in code is one of my passions and I am a true believer in keeping functions as honest as possible.
+I believe that being in a continuous state of learning is paramount as technology continues to rapidly evolve.
+The command line is my happy place, with git being my best friend. Once I met vim, I knew my relationship with my mouse was never going to be the same.
 
 
 
