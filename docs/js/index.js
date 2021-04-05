@@ -16,6 +16,7 @@ function registerTemplate() {
         templates[templateName] = $("> div", template);
     })
 }
+
 function createPage(num) {
     const page = $(templates.page).clone()
     $(".footer .page-num", page).html(num);
