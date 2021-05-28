@@ -84,8 +84,10 @@ function moveContentsIntoPages(contents) {
 }
 
 $(document).ready(() => {
+    $(document.body).css("visibility", "hidden")
     registerTemplate()
     const contents = $("body > div.container").children()
     moveContentsIntoPages(contents)
     removeTemplates()
+    $(document.body).css("visibility", "visible")
 })
