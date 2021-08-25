@@ -192,7 +192,7 @@ For The Record (FTR) builds a web application for courts to capture, store, prod
 md:start-block:columns
 md:start-block:standard
 - Node / Typescript
-- Angular / Typescipt
+- Angular / Typescript
 - PostgresDB
 - Cloud Formation
 - Terraform
