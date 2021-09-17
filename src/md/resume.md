@@ -266,17 +266,20 @@ Working on a platform for charities and peer-to-peer fundraising. Specifically w
 
 md:start-block:columns
 md:start-block:standard
-- Serverless microservices
-- Typescript
+- Serverless
+- Node
 - React
+- Typescript
 md:end-block:standard
 md:start-block:standard
 - Docker
 - CircleCI
 - Terraform
+- LocalStack
 md:end-block:standard
 md:start-block:standard
 - AWS
+  - Lambda
   - DynamoDB
   - SNS/SQS
   - ApiGateway
