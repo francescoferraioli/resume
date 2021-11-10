@@ -412,7 +412,7 @@ md:start-block:standard
 md:end-block:standard
 - Writing Automated UI Tests
   - Using Capybara under Cucumber and RSpec
-  - Using FactoryGirl and SitePrims
+  - Using FactoryGirl and SitePrism
 md:start-block:standard
 md:end-block:standard
 - Use GIT for version control
