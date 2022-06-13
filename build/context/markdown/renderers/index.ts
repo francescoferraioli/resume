@@ -77,7 +77,7 @@ export const renderLines = (blockRendererStack: MarkDownRenderer[]) => (
     case "instruction":
       return renderInstruction(blockRendererStack)(acc, line);
     default:
-      assertUnreachable(line);
+      return assertUnreachable(line);
   }
 };
 
