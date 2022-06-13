@@ -17,8 +17,10 @@ interface MarkDownText {
 
 export const parseMarkdownFile = (file: string): MarkDownRendered[] =>
   parseMarkdownLines(
-    fs.readFileSync(file, "utf-8").split("\n").filter(isNotComment)
+    fs.readFileSync(file, "utf-8").split("\n").map(removeCarriageReturn).filter(isNotComment)
   );
+
+const removeCarriageReturn = (line: string) => line.replace("\r", "");
 
 const isNotComment = (line: string) => !line.startsWith("!#");
 
