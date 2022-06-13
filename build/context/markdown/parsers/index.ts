@@ -7,7 +7,7 @@ import {
 import { getRendererType, MarkDownRendered, renderLines } from "../renderers";
 import { MarkDownRenderer } from "../renderers/MarkDownRenderer";
 
-export type MarkDownLine = MarkDownText | MarkDownInstruction;
+export type MarkDownLine = MarkDownText | MarkDownInstruction | MarkDownComment;
 
 interface MarkDownText {
   lineNumber: number;
@@ -15,14 +15,20 @@ interface MarkDownText {
   line: string;
 }
 
+interface MarkDownComment {
+  lineNumber: number;
+  type: "comment";
+  line: string;
+}
+
 export const parseMarkdownFile = (file: string): MarkDownRendered[] =>
   parseMarkdownLines(
-    fs.readFileSync(file, "utf-8").split("\n").map(removeCarriageReturn).filter(isNotComment)
+    fs.readFileSync(file, "utf-8").split("\n").map(removeCarriageReturn)
   );
 
 const removeCarriageReturn = (line: string) => line.replace("\r", "");
 
-const isNotComment = (line: string) => !line.startsWith("!#");
+const isComment = (line: string) => line.startsWith("!#");
 
 export const parseMarkdownLines = (lines: string[]): MarkDownRendered[] => {
   const blockRendererStack: MarkDownRenderer[] = [];
@@ -49,7 +55,7 @@ const parseToMarkDownLine = (line: string, index: number): MarkDownLine => {
 
   return {
     lineNumber,
-    type: "text",
+    type: isComment(line) ? "comment" : "text",
     line,
   };
 };

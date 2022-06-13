@@ -70,6 +70,8 @@ export const renderLines = (blockRendererStack: MarkDownRenderer[]) => (
   line: MarkDownLine
 ): MarkDownRendered[] => {
   switch (line.type) {
+    case "comment":
+      return acc;
     case "text":
       return renderText(blockRendererStack)(acc, line.line);
     case "instruction":
