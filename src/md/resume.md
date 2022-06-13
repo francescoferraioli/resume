@@ -23,8 +23,6 @@ The command line is my happy place, with git being my best friend. Once I met vi
 
 
 
-
-
 !#------------------------#!
 !#         SKILLS         #!
 !#------------------------#!
