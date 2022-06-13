@@ -26,7 +26,7 @@ export const parseMarkdownFile = (file: string): MarkDownRendered[] =>
     fs.readFileSync(file, "utf-8").split("\n").map(removeCarriageReturn)
   );
 
-const removeCarriageReturn = (line: string) => line.replace("\r", "");
+const removeCarriageReturn = (line: string) => line.replace(/\r$/, "");
 
 const isComment = (line: string) => line.startsWith("!#");
 
