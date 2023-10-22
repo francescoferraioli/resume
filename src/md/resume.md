@@ -11,11 +11,11 @@ md:start-block:component.summary
   "skipContentClass": true
 }
 md:end-block:component
-I am an extremely passionate Full Stack Senior Software Engineer with a special love for Functional Programming.
-TypeScript ticks all my boxes, having the right balance of flexibility and type safety. My ideal stack would have to be Node (with TypeScript) on the backend and React (with TypeScript) on the frontend. However, I still have a lot of experience with .NET (C# / F#) as well as Angular.
-I am in love with using functional programming patterns to create intelligent, fast, secure, maintainable, readable, testable and reliable systems. Separating the purity in code is one of my passions and I am a true believer in keeping functions as honest as possible.
+I am an enthusiastic and dedicated Team Lead with a profound love for management and leadership.
+My leadership style is marked by inclusivity and adaptability, ensuring that every team member's perspective is valued, and I tailor my approach to meet the evolving needs of the team.
+At the core, I am Full Stack Senior Software Engineer with a special love for Functional Programming.
+TypeScript ticks all my boxes, having the right balance of flexibility and type safety. My ideal stack would have to be Node (with TypeScript) on the backend and React (with TypeScript) on the frontend.
 I believe that being in a continuous state of learning is paramount as technology continues to rapidly evolve.
-The command line is my happy place, with git being my best friend. Once I met vim, I knew my relationship with my mouse was never going to be the same.
 
 
 
