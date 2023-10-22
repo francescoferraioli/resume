@@ -171,6 +171,108 @@ md:start-block:component.experience
 md:end-block:component
 
 
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Team Lead (Visualizations)",
+    "company": "Displayr",
+    "start": "JUNE 2023",
+    "end": "CURRENT"
+  }
+}
+md:end-block:component
+
+Displayr was born out of market researchers who saw there were techonological gaps in their workflow and built the tools to fill those gaps.
+As the team lead of the visualization team, my job is to guide the team to deliver the goals to enable customers to build visualization that express the story within their data.
+
+
+
+md:start-block:columns
+md:start-block:standard
+- C# / .NET
+- React / Typescript
+- Plotly
+- D3
+md:end-block:standard
+md:start-block:standard
+- Azure
+- Pulumi
+- Blob Storage
+- CDN
+md:end-block:standard
+md:start-block:standard
+- JIRA
+- Confluence
+- Atlas
+- Miro
+md:end-block:standard
+md:end-block:columns
+
+
+
+
+
+
+
+
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Full Stack Senior Software Engineer (Data)",
+    "company": "Displayr",
+    "start": "JANUARY 2022",
+    "end": "JUNE 2022"
+  }
+}
+md:end-block:component
+
+I was working in the Data Team building features to allow customers to import their data into Displayr.
+
+
+
+md:start-block:columns
+md:start-block:standard
+- C# / .NET
+- React / Typescript
+md:end-block:standard
+md:start-block:standard
+- Azure
+- Cloud Services
+md:end-block:standard
+md:start-block:standard
+- FileStack
+- CircleCI
+md:end-block:standard
+md:end-block:columns
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 md:start-block:component
 {
@@ -179,7 +281,7 @@ md:start-block:component
     "jobTitle": "Full Stack Developer",
     "company": "For The Record",
     "start": "JANUARY 2021",
-    "end": "CURRENT"
+    "end": "JANUARY 2022"
   }
 }
 md:end-block:component
@@ -211,11 +313,7 @@ md:start-block:standard
   - SNS/SQS
 md:end-block:standard
 md:end-block:columns
-
-
-
-
-
+-----PAGE-BREAK-----
 md:start-block:component
 {
   "name": "experience-heading",
