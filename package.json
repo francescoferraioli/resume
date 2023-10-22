@@ -6,10 +6,10 @@
   "author": "Francesco Ferraioli <francesco.ferraioli@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "build": "bin/build",
-    "open": "bin/open",
-    "start": "bin/start",
-    "watch": "bin/watch",
+    "build": "sh bin/build",
+    "open": "sh bin/open",
+    "start": "sh bin/start",
+    "watch": "sh bin/watch",
     "start:watch": "concurrently bin/start bin/watch"
   },
   "dependencies": {
@@ -26,7 +26,6 @@
     "@types/sass": "^1.16.0",
     "browser-sync": "^2.26.14",
     "concurrently": "^6.0.0",
-    "entr-bin": "^0.0.1",
     "ts-node": "^9.1.1",
     "typescript": "^4.2.3"
   }
