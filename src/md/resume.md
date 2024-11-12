@@ -174,47 +174,76 @@ md:start-block:component
 {
   "name": "experience-heading",
   "props": {
-    "jobTitle": "Team Lead (Visualizations)",
+    "jobTitle": "Tech Lead (UI Platform)",
     "company": "Displayr",
-    "start": "JUNE 2023",
+    "start": "JANUARY 2024",
     "end": "CURRENT"
   }
 }
 md:end-block:component
 
-Displayr was born out of market researchers who saw there were techonological gaps in their workflow and built the tools to fill those gaps.
+As a Tech Lead on Displayr’s UI Platform team, I drove key initiatives to modernize and enhance the frontend infrastructure:
+
+<u>Design Refresh</u>
+Spearheaded a comprehensive UI reskin of Displayr’s application, coordinating design, engineering, and product teams to ensure visual consistency and modernization.
+
+<u>New Frontend Architecture</u>
+Architected and led the rollout of a scalable frontend framework using React and MobX, improving performance, maintainability, and extensibility across teams.
+
+<u>Frontend Performance Optimization</u>
+Directed efforts to reduce CPU usage and node leaks, enhancing responsiveness and efficiency through profiling, diagnostics, and strategic refactoring.
+
+<u>Owner of Shared Components Package</u>
+Oversaw the shared-components package, setting standards for reusability, improving documentation, and streamlining cross-team adoption.
+
+Beyond technical execution, I mentored engineers, set best practices, and planned initiatives that strengthened Displayr’s frontend foundation.
+md:start-block:columns
+md:start-block:standard
+- jQuery
+- React
+md:end-block:standard
+md:start-block:standard
+- Typescript
+- Mobx
+md:end-block:standard
+md:start-block:standard
+- Chrome DevTools
+- Splunk
+md:end-block:standard
+md:end-block:columns
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
+    "jobTitle": "Team Lead (Visualizations)",
+    "company": "Displayr",
+    "start": "JUNE 2022",
+    "end": "JANUARY 2024"
+  }
+}
+md:end-block:component
+
 As the team lead of the visualization team, my job is to guide the team to deliver the goals to enable customers to build visualization that express the story within their data.
-
-
 
 md:start-block:columns
 md:start-block:standard
 - C# / .NET
 - React / Typescript
 - Plotly
+md:end-block:standard
+md:start-block:standard
 - D3
+- Pulumi
+- Blob Storage / CDN
 md:end-block:standard
 md:start-block:standard
 - Azure
-- Pulumi
-- Blob Storage
-- CDN
-md:end-block:standard
-md:start-block:standard
 - JIRA
 - Confluence
-- Atlas
-- Miro
 md:end-block:standard
 md:end-block:columns
-
-
-
-
-
-
-
-
 
 
 md:start-block:component
@@ -247,32 +276,7 @@ md:start-block:standard
 - CircleCI
 md:end-block:standard
 md:end-block:columns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-----PAGE-BREAK-----
 md:start-block:component
 {
   "name": "experience-heading",
@@ -312,7 +316,9 @@ md:start-block:standard
   - SNS/SQS
 md:end-block:standard
 md:end-block:columns
------PAGE-BREAK-----
+
+
+
 md:start-block:component
 {
   "name": "experience-heading",
