@@ -11,11 +11,10 @@ md:start-block:component.summary
   "skipContentClass": true
 }
 md:end-block:component
-I am an enthusiastic and dedicated Team Lead with a profound love for management and leadership.
-My leadership style is marked by inclusivity and adaptability, ensuring that every team member's perspective is valued, and I tailor my approach to meet the evolving needs of the team.
-At the core, I am Full Stack Senior Software Engineer with a special love for Functional Programming.
-TypeScript ticks all my boxes, having the right balance of flexibility and type safety. My ideal stack would have to be Node (with TypeScript) on the backend and React (with TypeScript) on the frontend.
-I believe that being in a continuous state of learning is paramount as technology continues to rapidly evolve.
+I am an accomplished Senior Software Engineer with a strong focus on frontend development, bringing extensive expertise in crafting scalable, high-performance applications.
+Driven by a passion for functional programming and clean code, I excel in designing systems that are both robust and maintainable.
+TypeScript is my preferred tool for achieving a balance of flexibility and type safety, and I thrive in a stack that includes React (with TypeScript) on the frontend and Node (with TypeScript) on the backend.
+With a keen eye for detail and a commitment to technical excellence, I continuously seek innovative solutions to complex challenges, always pushing the boundaries to deliver impactful, user-centered products.
 
 
 
