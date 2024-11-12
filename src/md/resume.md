@@ -174,10 +174,55 @@ md:start-block:component
 {
   "name": "experience-heading",
   "props": {
+    "jobTitle": "Senior Frontend Engineer (UI Platform)",
+    "company": "Displayr",
+    "start": "JANUARY 2024",
+    "end": "CURRENT"
+  }
+}
+md:end-block:component
+
+As a Senior Frontend Engineer on Displayr’s UI Platform team, I led key projects to modernize and enhance the frontend infrastructure:
+
+- **Design Refresh**: Led a comprehensive redesign of Displayr’s application, collaborating with design and backend teams to create a unified, user-friendly experience.
+- **New Frontend Architecture**: Introduced and implemented a scalable frontend architecture using React and MobX, addressing issues in performance, maintainability, and extensibility, and supported cross-team adoption.
+- **Frontend Performance Optimization**: Focused on improving CPU usage and resolving node leaks, significantly enhancing application responsiveness and efficiency.
+- **Owner of Shared Components Package**: Took ownership of the shared-components package, ensuring consistency and quality across reusable components, while enhancing documentation and usability for other teams.
+
+Beyond my technical work, I mentored team members, raised code standards, and promoted collaboration, helping build a robust foundation for Displayr’s continued growth.
+
+
+md:start-block:columns
+md:start-block:standard
+- jQuery
+- React
+- Typescript
+md:end-block:standard
+md:start-block:standard
+- Mobx
+- esbuild
+- Storybook
+md:end-block:standard
+md:start-block:standard
+- Chrome DevTools
+- Splunk
+- Azure
+md:end-block:standard
+md:end-block:columns
+
+
+
+
+
+
+md:start-block:component
+{
+  "name": "experience-heading",
+  "props": {
     "jobTitle": "Team Lead (Visualizations)",
     "company": "Displayr",
-    "start": "JUNE 2023",
-    "end": "CURRENT"
+    "start": "JUNE 2022",
+    "end": "JANUARY 2024"
   }
 }
 md:end-block:component
@@ -207,11 +252,6 @@ md:start-block:standard
 - Miro
 md:end-block:standard
 md:end-block:columns
-
-
-
-
-
 
 
 
@@ -247,32 +287,7 @@ md:start-block:standard
 - CircleCI
 md:end-block:standard
 md:end-block:columns
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-----PAGE-BREAK-----
 md:start-block:component
 {
   "name": "experience-heading",
@@ -312,7 +327,9 @@ md:start-block:standard
   - SNS/SQS
 md:end-block:standard
 md:end-block:columns
------PAGE-BREAK-----
+
+
+
 md:start-block:component
 {
   "name": "experience-heading",
