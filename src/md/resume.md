@@ -42,22 +42,6 @@ md:end-block:component
 
 <u>TECHNICAL</u>
 
-Backend
-md:start-block:columns
-md:start-block:standard
-- .NET Core
-- C# / F#
-md:end-block:standard
-md:start-block:standard
-- Node / TypeScript
-- Terraform
-md:end-block:standard
-md:start-block:standard
-- AWS
-- Azure
-md:end-block:standard
-md:end-block:columns
-
 Frontend
 md:start-block:columns
 md:start-block:standard
@@ -71,6 +55,22 @@ md:end-block:standard
 md:start-block:standard
 - React
 - Angular
+md:end-block:standard
+md:end-block:columns
+
+Backend
+md:start-block:columns
+md:start-block:standard
+- .NET Core
+- C# / F#
+md:end-block:standard
+md:start-block:standard
+- Node / TypeScript
+- Terraform
+md:end-block:standard
+md:start-block:standard
+- AWS
+- Azure
 md:end-block:standard
 md:end-block:columns
 
