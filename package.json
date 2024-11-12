@@ -10,7 +10,7 @@
     "open": "sh bin/open",
     "start": "sh bin/start",
     "watch": "sh bin/watch",
-    "start:watch": "concurrently bin/start bin/watch"
+    "start:watch": "concurrently npm:start npm:watch"
   },
   "dependencies": {
     "handlebars": "^4.7.7",
