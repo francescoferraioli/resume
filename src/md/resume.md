@@ -184,35 +184,33 @@ md:end-block:component
 
 As a Senior Frontend Engineer on Displayr’s UI Platform team, I led key projects to modernize and enhance the frontend infrastructure:
 
-- **Design Refresh**: Led a comprehensive redesign of Displayr’s application, collaborating with design and backend teams to create a unified, user-friendly experience.
-- **New Frontend Architecture**: Introduced and implemented a scalable frontend architecture using React and MobX, addressing issues in performance, maintainability, and extensibility, and supported cross-team adoption.
-- **Frontend Performance Optimization**: Focused on improving CPU usage and resolving node leaks, significantly enhancing application responsiveness and efficiency.
-- **Owner of Shared Components Package**: Took ownership of the shared-components package, ensuring consistency and quality across reusable components, while enhancing documentation and usability for other teams.
+<u>Design Refresh</u>
+Led a comprehensive redesign of Displayr’s application, collaborating with design and backend teams to create a unified, user-friendly experience.
+
+<u>New Frontend Architecture</u>
+Introduced and implemented a scalable frontend architecture using React and MobX, addressing issues in performance, maintainability, and extensibility, and supported cross-team adoption.
+
+<u>Frontend Performance Optimization</u>
+Focused on improving CPU usage and resolving node leaks, significantly enhancing application responsiveness and efficiency.
+
+<u>Owner of Shared Components Package</u>
+Took ownership of the shared-components package, ensuring consistency and quality across reusable components, while enhancing documentation and usability for other teams.
 
 Beyond my technical work, I mentored team members, raised code standards, and promoted collaboration, helping build a robust foundation for Displayr’s continued growth.
-
-
 md:start-block:columns
 md:start-block:standard
 - jQuery
 - React
-- Typescript
 md:end-block:standard
 md:start-block:standard
+- Typescript
 - Mobx
-- esbuild
-- Storybook
 md:end-block:standard
 md:start-block:standard
 - Chrome DevTools
 - Splunk
-- Azure
 md:end-block:standard
 md:end-block:columns
-
-
-
-
 
 
 md:start-block:component
@@ -230,31 +228,23 @@ md:end-block:component
 Displayr was born out of market researchers who saw there were techonological gaps in their workflow and built the tools to fill those gaps.
 As the team lead of the visualization team, my job is to guide the team to deliver the goals to enable customers to build visualization that express the story within their data.
 
-
-
 md:start-block:columns
 md:start-block:standard
 - C# / .NET
 - React / Typescript
 - Plotly
+md:end-block:standard
+md:start-block:standard
 - D3
+- Pulumi
+- Blob Storage / CDN
 md:end-block:standard
 md:start-block:standard
 - Azure
-- Pulumi
-- Blob Storage
-- CDN
-md:end-block:standard
-md:start-block:standard
 - JIRA
 - Confluence
-- Atlas
-- Miro
 md:end-block:standard
 md:end-block:columns
-
-
-
 
 
 md:start-block:component
